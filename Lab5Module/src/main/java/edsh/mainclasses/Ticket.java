@@ -3,6 +3,8 @@ import java.time.ZonedDateTime;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -12,15 +14,18 @@ import edsh.helpers.MyScanner;
 
 public class Ticket implements Comparable<Ticket> {
     private long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
-    private String name; //Поле не может быть null, Строка не может быть пустой
-    private Coordinates coordinates; //Поле не может быть null
-    private ZonedDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
-    private long price; //Значение поля должно быть больше 0
-    private String comment; //Поле может быть null
-    private TicketType type; //Поле не может быть null
-    private Event event; //Поле не может быть null
+    private final String name; //Поле не может быть null, Строка не может быть пустой
+    private final Coordinates coordinates; //Поле не может быть null
+    private final ZonedDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
+    private final long price; //Значение поля должно быть больше 0
+    private final String comment; //Поле может быть null
+    private final TicketType type; //Поле не может быть null
+    private final Event event; //Поле не может быть null
     
     private static long lastId = 0;
+
+	@Getter
+	@Setter
     private static LinkedList<Ticket> list;
     
     public Ticket(String name, Coordinates coordinates, long price, String comment, TicketType type, Event event) throws WrongFieldExeption {
@@ -112,20 +117,12 @@ public class Ticket implements Comparable<Ticket> {
      * @param t Билет, который нужно встроить
      */
     public static void putWithId(int index, long id, Ticket t) {
-		if(lastId == t.id)
+		if (lastId == t.id)
 			lastId--;
 		t.id = id;
 		list.set(index, t);
-    	lastId = Math.max(lastId, id);
-    }
-    
-    /**
-     * Устанавливает коллекцию классу, для ее обработки
-     * @param list Коллекция
-     */
-    public static void setList(LinkedList<Ticket> list) {
-    	Ticket.list = list;
-    }
+		lastId = Math.max(lastId, id);
+	}
     
     /**
      * Сортирует коллекицию по имени, затем по дате создания

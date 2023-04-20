@@ -1,7 +1,9 @@
 package edsh.mainclasses;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.NoSuchElementException;
 
+import lombok.EqualsAndHashCode;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -9,13 +11,15 @@ import edsh.enums.EventType;
 import edsh.exeptions.WrongFieldExeption;
 import edsh.helpers.MyScanner;
 
-public class Event implements Comparable<Event> {
+@EqualsAndHashCode
+public class Event implements Comparable<Event>, Serializable {
+	@EqualsAndHashCode.Exclude
     private Long id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
-    private String name; //Поле не может быть null, Строка не может быть пустой
-    private LocalDate date; //Поле может быть null
-    private long minAge;
-    private long ticketsCount; //Значение поля должно быть больше 0
-    private EventType eventType; //Поле не может быть null
+    private final String name; //Поле не может быть null, Строка не может быть пустой
+    private final LocalDate date; //Поле может быть null
+    private final long minAge;
+    private final long ticketsCount; //Значение поля должно быть больше 0
+    private final EventType eventType; //Поле не может быть null
     
     private static long lastId = 0;
     
@@ -73,19 +77,7 @@ public class Event implements Comparable<Event> {
 	public int compareTo(Event ev) {
 		return this.date.compareTo(ev.date);
 	}
-    
-    @Override
-    public boolean equals(Object o) {
-    	if(o == this)
-    		return true;
-    	
-    	if(!(o instanceof Event))
-    		return false;
-    	
-    	Event ev = (Event)o;
-		return name.equals(ev.name) && date.equals(ev.date) && minAge == ev.minAge &&
-				ticketsCount == ev.ticketsCount && eventType.equals(ev.eventType);
-	}
+
     
     /**
      * Начинает создание нового объекта объекта, используя данный сканер

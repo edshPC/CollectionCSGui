@@ -6,8 +6,8 @@ import org.json.JSONObject;
 import edsh.exeptions.WrongFieldExeption;
 
 public class Coordinates {
-    private float x; //Максимальное значение поля: 542
-    private Integer y; //Максимальное значение поля: 203, Поле не может быть null
+    private final float x; //Максимальное значение поля: 542
+    private final Integer y; //Максимальное значение поля: 203, Поле не может быть null
     
     public Coordinates(float x, int y) throws WrongFieldExeption {
     	if(x > 542 || y > 203)

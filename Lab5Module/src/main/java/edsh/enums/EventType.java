@@ -1,6 +1,8 @@
 package edsh.enums;
 
-public enum EventType {
+import java.io.Serializable;
+
+public enum EventType implements Serializable {
     CONCERT,
     E_SPORTS,
     FOOTBALL,

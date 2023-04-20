@@ -1,0 +1,20 @@
+[{
+    "price": 100,
+    "name": "Имя",
+    "coordinates": {
+        "x": 102,
+        "y": 10
+    },
+    "comment": "Com",
+    "id": 1,
+    "creationDate": "2023-04-04T18:37:35.443431500+03:00[Europe/Moscow]",
+    "type": "CHEAP",
+    "event": {
+        "date": "2000-10-20",
+        "ticketsCount": 10,
+        "minAge": 10,
+        "name": "ev",
+        "id": 1,
+        "eventType": "BASKETBALL"
+    }
+}]

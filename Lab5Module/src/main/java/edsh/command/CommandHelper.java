@@ -60,7 +60,7 @@ public class CommandHelper {
 			String cmdStr = sc.nextLine();
 			if(!sc.isConsole())
 				System.out.println(cmdStr);
-			String[] cmd = cmdStr.split(" ");
+			String[] cmd = cmdStr.split(" +");
 			
 			if(cmd.length > 0 && commands.containsKey(cmd[0])) {
 				Command command = commands.get(cmd[0]);
