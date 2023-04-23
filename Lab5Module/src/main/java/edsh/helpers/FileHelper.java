@@ -1,5 +1,8 @@
 package edsh.helpers;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -11,17 +14,22 @@ import java.nio.file.attribute.FileTime;
 import java.util.Scanner;
 
 public class FileHelper {
-	private String filename;
+	private final String filename;
+	private final Path filePath;
+	private final Printer printer;
+	@Getter
+	@Setter
 	private String rawJson;
-	private Path filePath;
 	
 	/**
 	 * Создает объект помощника, работающего с определенным файлом
 	 * @param filename Имя файла в одной папке с программой / путь до этого файла
+	 * @param printer Принтер для вывода информации
 	 */
-	public FileHelper(String filename) {
+	public FileHelper(String filename, Printer printer) {
 		this.filename = filename;
 		this.filePath = Paths.get(filename);
+		this.printer = printer;
 	}
 	
 	/**
@@ -34,7 +42,7 @@ public class FileHelper {
 			Files.createDirectories(filePath.getParent());
 			return file.createNewFile();
 		} catch (Exception e) {
-			System.err.println("Ошибка в создании файла");
+			printer.errPrintln("Ошибка в создании файла");
 		}
 		return false;
 	}
@@ -46,24 +54,15 @@ public class FileHelper {
 	public boolean readFile() {
 		String source = "";
 		try (Scanner sc = new Scanner(filePath)) {
-			while (sc.hasNextLine()) {
-				source += sc.nextLine();
-			}
+			sc.useDelimiter("\\Z");
+			source += sc.next();
 		} catch (IOException e) {
-			System.err.println("Файл не найден. Лист объектов пуст");
+			printer.errPrintln("Файл не найден. Лист объектов пуст");
 			return false;
 		}
 	
 		this.rawJson = source;
 		return true;
-	}
-	
-	public String getRawJson() {
-		return rawJson;
-	}
-	
-	public void setRawJson(String rawJson) {
-		this.rawJson = rawJson;
 	}
 	
 	/**
@@ -75,15 +74,15 @@ public class FileHelper {
 		try (FileWriter fw = new FileWriter(filename)) {
 			fw.write(rawJson);
 		} catch (FileNotFoundException e) {
-			System.out.println("Файла не существует. Создание...");
+			printer.println("Файла не существует. Создание...");
 			if(createFile())
 				writeToFile(rawJson);
 			else {
-				System.err.println("Ошибка в создании файла. Попробуйте изменить права доступа");
+				printer.errPrintln("Ошибка в создании файла. Попробуйте изменить права доступа");
 				return false;
 			}
 		} catch (IOException e) {
-			System.err.println("Ошибка в записи файла. Попробуйте изменить права доступа");
+			printer.errPrintln("Ошибка в записи файла. Попробуйте изменить права доступа");
 			return false;
 		}
 		
@@ -104,9 +103,9 @@ public class FileHelper {
 	 */
 	public FileTime getCreationTime() {
 		try {
-			return (FileTime) Files.getAttribute(Paths.get(filename), "creationTime");
+			return (FileTime) Files.getAttribute(filePath, "creationTime");
 		} catch (IOException e) {
-			return FileTime.fromMillis(0);
+			return null;
 		}
 	}
 	

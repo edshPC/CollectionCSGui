@@ -1,22 +1,21 @@
 package edsh.command;
 
-import java.util.LinkedList;
 
+import edsh.helpers.CommandHelper.Holder;
 import edsh.mainclasses.Ticket;
 
-public class FilterContainsCommentCmd implements Command {
-	private LinkedList<Ticket> list;
+public class FilterContainsCommentCmd extends AbstractCommand {
 	
-	public FilterContainsCommentCmd(CommandHelper ch) {
-		this.list = ch.getList();
+	public FilterContainsCommentCmd(Holder h) {
+		super(h, "filter_contains_comment", "[comment] : вывести элементы, значение поля comment которых содержит заданную подстроку");
 	}
 	
 	
 	@Override
 	public String execute(String[] args) {
 		String comment = "";
-		if(args.length > 1) {
-			for (int i = 1; i < args.length-1; i++) {
+		if(args != null && args.length > 0) {
+			for (int i = 0; i < args.length-1; i++) {
 				comment += args[i] + " ";
 			}
 			comment += args[args.length-1];
@@ -32,11 +31,6 @@ public class FilterContainsCommentCmd implements Command {
 			return "Нечего вывести";
 		
 		return "Билеты с данной строкой в комментарии:\n" + out.substring(0, out.length()-1);
-	}
-
-	@Override
-	public String getName() {
-		return "filter_contains_comment";
 	}
 
 }

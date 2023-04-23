@@ -1,10 +1,11 @@
 package edsh.mainclasses;
 import java.time.ZonedDateTime;
-import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
+import edsh.helpers.ConsolePrinter;
+import edsh.helpers.ListHelper;
+import edsh.helpers.Printer;
 import lombok.Getter;
-import lombok.Setter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -12,6 +13,7 @@ import edsh.enums.TicketType;
 import edsh.exeptions.WrongFieldExeption;
 import edsh.helpers.MyScanner;
 
+@Getter
 public class Ticket implements Comparable<Ticket> {
     private long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private final String name; //Поле не может быть null, Строка не может быть пустой
@@ -21,12 +23,8 @@ public class Ticket implements Comparable<Ticket> {
     private final String comment; //Поле может быть null
     private final TicketType type; //Поле не может быть null
     private final Event event; //Поле не может быть null
-    
-    private static long lastId = 0;
 
-	@Getter
-	@Setter
-    private static LinkedList<Ticket> list;
+    private static long lastId = 0;
     
     public Ticket(String name, Coordinates coordinates, long price, String comment, TicketType type, Event event) throws WrongFieldExeption {
 		id = ++lastId;
@@ -72,16 +70,6 @@ public class Ticket implements Comparable<Ticket> {
     	return jObj;
     }
     
-    public Event getEvent() {
-		return this.event;
-	}
-    public String getComment() {
-		return this.comment;
-	}
-    public long getPrice() {
-		return this.price;
-	}
-    
     @Override
     public String toString() {
     	String out = "Информация о билете #" + id + ":\n" +
@@ -120,31 +108,10 @@ public class Ticket implements Comparable<Ticket> {
 		if (lastId == t.id)
 			lastId--;
 		t.id = id;
-		list.set(index, t);
+		ListHelper.getList().set(index, t);
 		lastId = Math.max(lastId, id);
 	}
-    
-    /**
-     * Сортирует коллекицию по имени, затем по дате создания
-     */
-    public static void sortList() {
-    	list.sort(Ticket::compareTo);
-    }
-    
-    /**
-     * Возвращает индекс элемента в коллекции по его id
-     * @param id id
-     * @return Индекс / -1 если объект не найден
-     */
-    public static int getIndexById(long id) {
-    	int index = 0;
-    	for(Ticket check : Ticket.list) {
-    		if(check.id == id)
-    			return index;
-    		index++;
-    	}
-    	return -1;
-    }
+
     
     /**
      * Начинает создание нового объекта билета, используя данный сканер
@@ -154,15 +121,16 @@ public class Ticket implements Comparable<Ticket> {
      * @throws NoSuchElementException Если ввод полей отменен
      */
     public static Ticket create(MyScanner sc) throws WrongFieldExeption, NoSuchElementException {
-    	boolean needReask = sc.isConsole();//sc.hasNext();
+		Printer printer = new ConsolePrinter();
+    	boolean needReask = sc.isConsole();
     	String ticketName = "";
 		do {
-			System.out.print("Введи имя билета:\n>> ");
+			printer.print("Введи имя билета:\n>> ");
 			ticketName = sc.nextLine();
 			if(!needReask)
-				System.out.println(ticketName);
+				printer.println(ticketName);
 			if(ticketName.isBlank()) {
-				System.err.println("Имя билета не должно быть пустым");
+				printer.errPrintln("Имя билета не должно быть пустым");
 				continue;
 			}
 			break;
@@ -170,10 +138,10 @@ public class Ticket implements Comparable<Ticket> {
 		
 		Coordinates coords = null;
 		do {
-			System.out.print("Введи координаты места через запятую (x - float <= 542, y - int <= 203, пример: '10.2, 20'):\n>> ");
+			printer.print("Введи координаты места через запятую (x - float <= 542, y - int <= 203, пример: '10.2, 20'):\n>> ");
 			String coordsStr = sc.nextLine();
 			if(!needReask)
-				System.out.println(coordsStr);
+				printer.println(coordsStr);
 			String[] coordsSplit = coordsStr.split(", ");
 			try {
 				float x = Float.parseFloat(coordsSplit[0]);
@@ -181,50 +149,50 @@ public class Ticket implements Comparable<Ticket> {
 				coords = new Coordinates(x, y);
 				break;
 			} catch (NumberFormatException | IndexOutOfBoundsException | WrongFieldExeption e) {
-				System.err.println("Ошибка при вводе координат: " + e.getMessage());
+				printer.errPrintln("Ошибка при вводе координат: " + e.getMessage());
 			}
 		} while(needReask);
 		
 		long price = 0;
 		do {
-			System.out.print("Введи цену билета (число > 0):\n>> ");
+			printer.print("Введи цену билета (число > 0):\n>> ");
 			String priceStr = sc.nextLine();
 			if(!needReask)
-				System.out.println(priceStr);
+				printer.println(priceStr);
 			try {
 				price = Long.parseLong(priceStr);
 				if(price <= 0) {
-					System.err.println("Цена должна быть > 0");
+					printer.errPrintln("Цена должна быть > 0");
 					continue;
 				}
 				break;
 			} catch (NumberFormatException e) {
-				System.err.println("Ошибка при вводе цены: " + e.getMessage());
+				printer.errPrintln("Ошибка при вводе цены: " + e.getMessage());
 			}
 		} while(needReask);
 		
-		System.out.print("Введи комментарий:\n>> ");
+		printer.print("Введи комментарий:\n>> ");
 		String comment = sc.nextLine();
 		if(!needReask)
-			System.out.println(comment);
+			printer.println(comment);
 		
 		TicketType type = null;
 		do {
-			System.out.println("Введи номер типа билета, доступные типы:");
+			printer.println("Введи номер типа билета, доступные типы:");
 			TicketType[] values = TicketType.values();
 			for(int i=0; i<values.length; i++) {
-				System.out.println(" " + (i+1) + ". " + values[i]);
+				printer.println(" " + (i+1) + ". " + values[i]);
 			}
-			System.out.print(">> ");
+			printer.print(">> ");
 			String strId = sc.nextLine();
 			if(!needReask)
-				System.out.println(strId);
+				printer.println(strId);
 			try {
 				int id = Integer.parseInt(strId);
 				type = values[id-1];
 				break;
 			} catch (NumberFormatException | IndexOutOfBoundsException e) {
-				System.err.println("Ошибка при вводе типа: " + e.getMessage());
+				printer.errPrintln("Ошибка при вводе типа: " + e.getMessage());
 			}
 		} while(needReask);
 		
@@ -234,7 +202,7 @@ public class Ticket implements Comparable<Ticket> {
 				event = Event.create(sc);
 				break;
 			} catch (Exception e) {
-				System.err.println("Ошибка при создании события: " + e.getMessage());
+				printer.errPrintln("Ошибка при создании события: " + e.getMessage());
 			}
 		} while(needReask);
 		

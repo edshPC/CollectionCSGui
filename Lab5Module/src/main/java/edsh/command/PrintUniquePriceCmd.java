@@ -1,15 +1,14 @@
 package edsh.command;
 
-import java.util.LinkedList;
 import java.util.TreeSet;
 
+import edsh.helpers.CommandHelper;
 import edsh.mainclasses.Ticket;
 
-public class PrintUniquePriceCmd implements Command {
-	private LinkedList<Ticket> list;
+public class PrintUniquePriceCmd extends AbstractCommand {
 	
-	public PrintUniquePriceCmd(CommandHelper ch) {
-		this.list = ch.getList();
+	public PrintUniquePriceCmd(CommandHelper.Holder h) {
+		super(h, "print_unique_price", ": вывести уникальные значения поля price всех элементов в коллекции");
 	}
 	
 	@Override
@@ -23,11 +22,6 @@ public class PrintUniquePriceCmd implements Command {
 			prices.add(ticket.getPrice());
 		}
 		return "Надены билеты по следующим ценам:\n" + prices.toString();
-	}
-
-	@Override
-	public String getName() {
-		return "print_unique_price";
 	}
 
 }

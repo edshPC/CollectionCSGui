@@ -1,13 +1,12 @@
 package edsh.command;
 
-import edsh.helpers.MyScanner;
 
-public class ExitCmd implements Command {
-	
-	private MyScanner sc;
-		
-	public ExitCmd(CommandHelper ch) {
-		this.sc = ch.getScanner();
+import edsh.helpers.CommandHelper;
+
+public class ExitCmd extends AbstractCommand {
+
+	public ExitCmd(CommandHelper.Holder h) {
+		super(h, "exit", ": завершить программу (без сохранения в файл)");
 	}
 	
 	@Override
@@ -16,11 +15,6 @@ public class ExitCmd implements Command {
 		sc.close();
 		System.exit(0);
 		return "Программа завершена";
-	}
-
-	@Override
-	public String getName() {
-		return "exit";
 	}
 
 }

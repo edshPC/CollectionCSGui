@@ -1,9 +1,12 @@
 package edsh.helpers;
 
+import lombok.Getter;
+
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class MyScanner {
+@Getter
+public class MyScanner implements AutoCloseable {
 	private final Scanner sc;
 	private final boolean isConsole;
 	private boolean isOpen = true;
@@ -11,14 +14,6 @@ public class MyScanner {
 	public MyScanner(Scanner sc, boolean isConsole) {
 		this.sc = sc;
 		this.isConsole = isConsole;
-	}
-
-	public Scanner getScanner() {
-		return sc;
-	}
-
-	public boolean isConsole() {
-		return isConsole;
 	}
 	
 	public boolean hasNextLine() throws IllegalStateException {
@@ -28,13 +23,10 @@ public class MyScanner {
 	public String nextLine() throws IllegalStateException, NoSuchElementException {
 		return sc.nextLine();
 	}
-	
+
+	@Override
 	public void close() {
 		sc.close();
 		isOpen = false;
-	}
-
-	public boolean isOpen() {
-		return isOpen;
 	}
 }

@@ -1,14 +1,11 @@
 package edsh.command;
 
-import java.util.LinkedList;
+import edsh.helpers.CommandHelper.Holder;
 
-import edsh.mainclasses.Ticket;
-
-public class ClearCmd implements Command {
-	private LinkedList<Ticket> list;
+public class ClearCmd extends AbstractCommand {
 	
-	public ClearCmd(CommandHelper ch) {
-		this.list = ch.getList();
+	public ClearCmd(Holder h) {
+		super(h, "clear", ": очистить коллекцию");
 	}
 	
 	@Override
@@ -16,10 +13,4 @@ public class ClearCmd implements Command {
 		list.clear();
 		return "Коллекция очищена";
 	}
-
-	@Override
-	public String getName() {
-		return "clear";
-	}
-
 }

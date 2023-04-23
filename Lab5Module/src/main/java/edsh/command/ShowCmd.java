@@ -1,14 +1,12 @@
 package edsh.command;
 
-import java.util.LinkedList;
-
+import edsh.helpers.CommandHelper;
 import edsh.mainclasses.Ticket;
 
-public class ShowCmd implements Command {
-	private LinkedList<Ticket> list;
+public class ShowCmd extends AbstractCommand {
 	
-	public ShowCmd(CommandHelper ch) {
-		this.list = ch.getList();
+	public ShowCmd(CommandHelper.Holder h) {
+		super(h, "show", ": вывести все элементы коллекции в строковом представлении");
 	}
 	
 	@Override
@@ -20,11 +18,6 @@ public class ShowCmd implements Command {
 			out += ticket + "\n";
 		}
 		return out.substring(0, out.length()-1);
-	}
-
-	@Override
-	public String getName() {
-		return "show";
 	}
 
 }

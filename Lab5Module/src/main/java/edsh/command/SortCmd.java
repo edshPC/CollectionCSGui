@@ -1,22 +1,20 @@
 package edsh.command;
 
-import edsh.mainclasses.Ticket;
+import edsh.helpers.CommandHelper;
+import edsh.helpers.ListHelper;
 
-public class SortCmd implements Command {
+public class SortCmd extends AbstractCommand {
 	
-	public SortCmd(CommandHelper ch) {}
+	public SortCmd(CommandHelper.Holder h) {
+		super(h, "sort", ": отсортировать коллекцию");
+	}
 	
 	@Override
 	public String execute(String[] args) {
-		
-		Ticket.sortList();
+
+		ListHelper.sortList();
 		
 		return "Коллекция отсортирована";
-	}
-
-	@Override
-	public String getName() {
-		return "sort";
 	}
 
 }

@@ -1,30 +1,22 @@
 package edsh.command;
 
-import java.util.LinkedList;
+import edsh.helpers.CommandHelper;
 
-import edsh.mainclasses.Ticket;
-
-public class RemoveFirstCmd implements Command {
-	private LinkedList<Ticket> list;
+public class RemoveFirstCmd extends AbstractCommand {
 	
-	public RemoveFirstCmd(CommandHelper ch) {
-		this.list = ch.getList();
+	public RemoveFirstCmd(CommandHelper.Holder h) {
+		super(h, "remove_first", ": удалить первый элемент из коллекции");
 	}
 	
 	
 	@Override
 	public String execute(String[] args) {
 		if(list.size() == 0)
-			return "Нечего удалить";
+			return "!Нечего удалить";
 		
 		list.removeFirst();
 		
 		return "Билет успешно удален!";
-	}
-
-	@Override
-	public String getName() {
-		return "remove_first";
 	}
 
 }

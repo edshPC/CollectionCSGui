@@ -26,14 +26,25 @@ public class NetworkHandler {
         return false;
     }
 
-    public void send(Object o) {
+    public void send(Request o) {
         try {
             BufferedOutputStream buf = new BufferedOutputStream(socket.getOutputStream());
             ObjectOutputStream oos = new ObjectOutputStream(buf);
             oos.writeObject(o);
-            oos.close();
+            oos.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
+    public Response accept() {
+        try {
+            BufferedInputStream buf = new BufferedInputStream(socket.getInputStream());
+            ObjectInputStream ois = new ObjectInputStream(buf);
+            return (Response) ois.readObject();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

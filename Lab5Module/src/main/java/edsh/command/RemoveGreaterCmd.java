@@ -1,14 +1,12 @@
 package edsh.command;
 
-import java.util.LinkedList;
+import edsh.helpers.CommandHelper;
+import edsh.helpers.ListHelper;
 
-import edsh.mainclasses.Ticket;
-
-public class RemoveGreaterCmd implements Command {
-	private LinkedList<Ticket> list;
+public class RemoveGreaterCmd extends AbstractCommand {
 	
-	public RemoveGreaterCmd(CommandHelper ch) {
-		this.list = ch.getList();
+	public RemoveGreaterCmd(CommandHelper.Holder h) {
+		super(h, "remove_greater", "{id} : удалить из коллекции все элементы, превышающие заданный");
 	}
 	
 	
@@ -16,28 +14,23 @@ public class RemoveGreaterCmd implements Command {
 	public String execute(String[] args) {
 		long id;
 		try {
-			id = Long.valueOf(args[1]);
-		} catch (NumberFormatException | IndexOutOfBoundsException e) {
-			return "Не указан или указан неверно id элемента. Пожалуйста укажите id как число, пример: 'remove_greater 5'";
+			id = Long.parseLong(args[1]);
+		} catch (Exception e) {
+			return "!Не указан или указан неверно id элемента. Пожалуйста укажите id как число, пример: 'remove_greater 5'";
 		}
-		
-		Ticket.sortList();
-		int index = Ticket.getIndexById(id);
+
+		ListHelper.sortList();
+		int index = ListHelper.getIndexById(id);
 		if(index < 0)
-			return "Не найден билет с данным id";
+			return "!Не найден билет с данным id";
 		else if(index == 0)
-			return "Не найдено билетов выше данного";
+			return "!Не найдено билетов выше данного";
 		
 		for (int i = 0; i < index; i++) {
 			list.removeFirst();
 		}
 		
 		return "Было удалено " + index + " билетов";
-	}
-
-	@Override
-	public String getName() {
-		return "remove_greater";
 	}
 
 }

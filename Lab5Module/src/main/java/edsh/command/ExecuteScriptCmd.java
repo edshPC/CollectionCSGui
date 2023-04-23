@@ -2,22 +2,17 @@ package edsh.command;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-import edsh.helpers.FileHelper;
+import edsh.helpers.CommandHelper;
 import edsh.helpers.MyScanner;
-import edsh.mainclasses.Ticket;
 
-public class ExecuteScriptCmd implements Command {
-	private LinkedList<Ticket> list;
-	private FileHelper fh;
-	private static ArrayList<Path> invokes = new ArrayList<>();
+public class ExecuteScriptCmd extends AbstractCommand {
+	private static final LinkedList<Path> invokes = new LinkedList<>();
 	
-	public ExecuteScriptCmd(CommandHelper ch) {
-		this.list = ch.getList();
-		this.fh = ch.getFileHelper();
+	public ExecuteScriptCmd(CommandHelper.Holder h) {
+		super(h, "execute_script", "{file_name} : считать и исполнить скрипт из указанного файла");
 	}
 	
 	@Override
@@ -28,27 +23,21 @@ public class ExecuteScriptCmd implements Command {
 			path = Paths.get(args[1]);
 			sc = new MyScanner(new Scanner(path), false);
 		} catch (Exception e) {
-			return "Файла с таким названием по этому пути не обнаружено. Создайте, например, файл script.txt в каталоге с программой и введите 'execute_script script.txt'";
+			return "!Файла с таким названием по этому пути не обнаружено. Создайте, например, файл script.txt в каталоге с программой и введите 'execute_script script.txt' или измените права";
 		}
-		CommandHelper commandHelper = new CommandHelper(list, sc, fh);
-		commandHelper.registerAllCommands();
 		if(invokes.contains(path)) {
-			invokes.clear();
+			//invokes.clear();
 			sc.close();
-			return "Обнаружена рекурсия. Провертье, не запускает ли скрипт сам себя";
+			return "!Обнаружена рекурсия. Провертье, не запускает ли скрипт сам себя";
 		}
+		CommandHelper commandHelper = new CommandHelper(sc, fh);
+		commandHelper.registerAllCommands();
 		invokes.add(path);
 		while (sc.hasNextLine()) {
 			commandHelper.executeNextCommand();
 		}
-		invokes.clear();
+		invokes.removeLast();
 		sc.close();
 		return "Скрипт завершен";
 	}
-
-	@Override
-	public String getName() {
-		return "execute_script";
-	}
-
 }

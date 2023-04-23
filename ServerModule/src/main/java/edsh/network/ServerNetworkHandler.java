@@ -2,9 +2,12 @@ package edsh.network;
 
 import edsh.helpers.LoggerPrinter;
 import edsh.helpers.Printer;
+import edsh.helpers.RequestCommandHelper;
+import lombok.SneakyThrows;
 
 import java.io.*;
 import java.net.InetSocketAddress;
+import java.net.SocketException;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.util.*;
@@ -12,6 +15,7 @@ import java.util.*;
 public class ServerNetworkHandler {
     private final Printer printer = new LoggerPrinter(getClass().getSimpleName());
     private final int port;
+    private RequestHandler requestHandler;
     private ServerSocketChannel servSocket;
     private Selector selector;
 
@@ -19,9 +23,10 @@ public class ServerNetworkHandler {
         this.port = port;
     }
 
-    public boolean open() {
+    public boolean open(RequestCommandHelper commandHelper) {
         try {
             selector = Selector.open();
+            requestHandler = new RequestHandler(commandHelper);
 
             servSocket = ServerSocketChannel.open();
             servSocket.bind(new InetSocketAddress(port));
@@ -35,7 +40,7 @@ public class ServerNetworkHandler {
     }
 
     public void run() throws IOException {
-        if(selector.select(1000) == 0) return;
+        if(selector.select(200) == 0) return;
 
         for(Iterator<SelectionKey> it = selector.selectedKeys().iterator(); it.hasNext();) {
             SelectionKey key = it.next();
@@ -44,34 +49,37 @@ public class ServerNetworkHandler {
             if(key.isAcceptable())
                 handleConnection();
             else if(key.isReadable()) {
-                if(handleRequest(key));
+                if(attachRequest(key)) requestHandler.handleRequestFrom(key);
                 else disconnectClient(key);
             }
             else if (key.isWritable()) {
-                if(handleResponse(key));
-                else disconnectClient(key);
+                if(!handleResponse(key)) disconnectClient(key);
             }
         }
     }
 
-    private boolean handleConnection() {
+    @SneakyThrows
+    public void close() {
+        selector.close();
+        servSocket.close();
+    }
+
+    private void handleConnection() {
         try {
             SocketChannel client = servSocket.accept();
             client.configureBlocking(false);
             client.register(selector, SelectionKey.OP_READ);
             printer.println("Подключен клиент " + client.getRemoteAddress().toString());
-            return true;
         } catch (Exception e) {
             printer.errPrintln("Ошибка в создании подключения: " + e.getMessage());
         }
-        return false;
     }
 
-    private boolean handleRequest(SelectionKey key) {
+    private boolean attachRequest(SelectionKey key) {
         SocketChannel client = (SocketChannel) key.channel();
         try {
             ByteBuffer bb = ByteBuffer.allocate(1 << 20); //Mb
-            if(client.read(bb) < 0) return false;
+            if(client.read(bb) <= 0) return false;
             ObjectInputStream ois = new ObjectInputStream(
                     new ByteArrayInputStream(bb.array()));
             Object request = ois.readObject();
@@ -84,7 +92,8 @@ public class ServerNetworkHandler {
             key.attach(request);
             printer.println("Получен запрос от клиента " + client.getRemoteAddress().toString());
             return true;
-        } catch (Exception e) {
+        } catch (SocketException ignored) {}
+        catch (IOException | ClassNotFoundException e) {
             printer.errPrintln("Ошибка в получении запроса: " + e.getMessage());
         }
         return false;
@@ -105,7 +114,8 @@ public class ServerNetworkHandler {
             oos.close();
 
             ByteBuffer bb = ByteBuffer.wrap(baos.toByteArray());
-            if(client.write(bb) < 0) return false;
+            if(client.write(bb) <= 0) return false;
+            key.interestOps(SelectionKey.OP_READ); //После записи разрешаем только читать
 
             printer.println("Ответ отправлен клиенту " + client.getRemoteAddress().toString());
             return true;

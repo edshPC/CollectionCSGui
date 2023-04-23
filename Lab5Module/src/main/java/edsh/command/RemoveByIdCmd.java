@@ -1,14 +1,12 @@
 package edsh.command;
 
-import java.util.LinkedList;
+import edsh.helpers.CommandHelper;
+import edsh.helpers.ListHelper;
 
-import edsh.mainclasses.Ticket;
-
-public class RemoveByIdCmd implements Command {
-	private LinkedList<Ticket> list;
+public class RemoveByIdCmd extends AbstractCommand {
 	
-	public RemoveByIdCmd(CommandHelper ch) {
-		this.list = ch.getList();
+	public RemoveByIdCmd(CommandHelper.Holder h) {
+		super(h, "remove_by_id", "{id} : удалить элемент из коллекции по его id");
 	}
 	
 	
@@ -16,22 +14,17 @@ public class RemoveByIdCmd implements Command {
 	public String execute(String[] args) {
 		long id;
 		try {
-			id = Long.valueOf(args[1]);
-		} catch (NumberFormatException | IndexOutOfBoundsException e) {
-			return "Не указан или указан неверно id элемента. Пожалуйста укажите id как число, пример: 'update 5'";
+			id = Long.parseLong(args[0]);
+		} catch (Exception e) {
+			return "!Не указан или указан неверно id элемента. Пожалуйста укажите id как число";
 		}
-		int index = Ticket.getIndexById(id);
+		int index = ListHelper.getIndexById(id);
 		if(index < 0)
-			return "Не найден билет с данным id";
+			return "!Не найден билет с данным id";
 		
 		list.remove(index);
 		
 		return "Билет успешно удален!";
-	}
-
-	@Override
-	public String getName() {
-		return "remove_by_id";
 	}
 
 }

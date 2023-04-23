@@ -1,20 +1,15 @@
 package edsh.command;
 
-import java.util.LinkedList;
-
+import edsh.helpers.CommandHelper;
 import org.json.JSONArray;
 
-import edsh.helpers.FileHelper;
 import edsh.helpers.JsonHelper;
 import edsh.mainclasses.Ticket;
 
-public class SaveCmd implements Command {
-	private LinkedList<Ticket> list;
-	private FileHelper fh;
-	
-	public SaveCmd(CommandHelper ch) {
-		this.list = ch.getList();
-		this.fh = ch.getFileHelper();
+public class SaveCmd extends AbstractCommand {
+
+	public SaveCmd(CommandHelper.Holder h) {
+		super(h, "save", ": сохранить коллекцию в файл");
 	}
 	
 	@Override
@@ -29,12 +24,7 @@ public class SaveCmd implements Command {
 		if(fh.writeToFile())
 			return "Коллекция сохранена";
 		else
-			return "Коллекция не сохранена";
-	}
-
-	@Override
-	public String getName() {
-		return "save";
+			return "!Коллекция не сохранена";
 	}
 
 }

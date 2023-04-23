@@ -1,19 +1,16 @@
 package edsh.command;
 
-import java.util.LinkedList;
-
 import edsh.exeptions.WrongFieldExeption;
-import edsh.helpers.MyScanner;
+import edsh.helpers.CommandHelper;
 import edsh.mainclasses.Event;
 import edsh.mainclasses.Ticket;
 
-public class RemoveAllByEventCmd implements Command {
-	private LinkedList<Ticket> list;
-	private MyScanner sc;
-	
-	public RemoveAllByEventCmd(CommandHelper ch) {
-		this.list = ch.getList();
-		this.sc = ch.getScanner();
+import java.util.Iterator;
+
+public class RemoveAllByEventCmd extends AbstractCommand {
+
+	public RemoveAllByEventCmd(CommandHelper.Holder h) {
+		super(h, "remove_all_by_event", "{event} : удалить из коллекции все элементы, значение поля event которого эквивалентно заданному");
 	}
 	
 	
@@ -31,22 +28,17 @@ public class RemoveAllByEventCmd implements Command {
 		
 		int count = 0;
 		
-		for (int i = 0; i < list.size(); i++) {
-			if(list.get(i).getEvent().equals(ev)) {
-				list.remove(i);
+		for(Iterator<Ticket> it = list.iterator(); it.hasNext();) {
+			Ticket ticket = it.next();
+			if(ticket.getEvent().equals(ev)){
+				it.remove();
 				count++;
 			}
 		}
 		
 		if(count == 0)
-			return "Не найдено билетов с таким событием";
+			return "!Не найдено билетов с таким событием";
 		
 		return "Удалено " + count + " билетов";
 	}
-
-	@Override
-	public String getName() {
-		return "remove_all_by_event";
-	}
-
 }

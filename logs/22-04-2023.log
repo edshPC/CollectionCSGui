@@ -1,0 +1,31 @@
+22:18:42 INFO | Main >> Сервер запущен
+22:19:00 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:54574
+22:19:00 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:54574
+22:19:00 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:54574
+22:23:26 INFO | Main >> Сервер запущен
+22:23:31 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:54599
+22:23:31 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:54599
+22:23:31 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:54599
+22:23:31 ERROR| ServerNetworkHandler >> Ошибка в получении запроса: Программа на вашем хост-компьютере разорвала установленное подключение
+22:23:31 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:54599
+22:27:14 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:54621
+22:27:14 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:54621
+22:27:14 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:54621
+22:27:14 ERROR| ServerNetworkHandler >> Ошибка в получении запроса: Программа на вашем хост-компьютере разорвала установленное подключение
+22:27:14 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:54621
+22:37:05 INFO | Main >> Сервер запущен
+22:37:10 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:54648
+22:37:10 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:54648
+22:37:10 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:54648
+22:37:10 ERROR| ServerNetworkHandler >> Ошибка в получении запроса: Программа на вашем хост-компьютере разорвала установленное подключение
+22:37:10 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:54648
+22:37:25 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:54652
+22:37:25 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:54652
+22:37:25 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:54652
+22:37:26 ERROR| ServerNetworkHandler >> Ошибка в получении запроса: Connection reset
+22:37:26 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:54652
+22:45:50 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:54688
+22:45:50 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:54688
+22:45:50 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:54688
+22:45:50 ERROR| ServerNetworkHandler >> Ошибка в получении запроса: Connection reset
+22:45:50 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:54688
