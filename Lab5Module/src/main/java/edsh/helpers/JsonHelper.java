@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import edsh.exeptions.WrongFieldExeption;
+import edsh.exeptions.WrongFieldException;
 import edsh.mainclasses.Ticket;
 
 public class JsonHelper {
@@ -57,7 +57,7 @@ public class JsonHelper {
 			
 			try {
 				temp.add(new Ticket(jsonArr.getJSONObject(i)));
-			} catch (WrongFieldExeption | JSONException e) {
+			} catch (WrongFieldException | JSONException e) {
 				System.err.println("Пропущен поврежденный билет: " + e.getMessage());
 			}
 		}

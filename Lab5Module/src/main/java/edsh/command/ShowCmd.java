@@ -2,8 +2,9 @@ package edsh.command;
 
 import edsh.helpers.CommandHelper;
 import edsh.mainclasses.Ticket;
+import edsh.network.AvailableCommand;
 
-public class ShowCmd extends AbstractCommand {
+public class ShowCmd extends AbstractCommand implements ClientAvailable {
 	
 	public ShowCmd(CommandHelper.Holder h) {
 		super(h, "show", ": вывести все элементы коллекции в строковом представлении");
@@ -20,4 +21,8 @@ public class ShowCmd extends AbstractCommand {
 		return out.substring(0, out.length()-1);
 	}
 
+	@Override
+	public AvailableCommand makeAvailable() {
+		return new AvailableCommand(getName(), getDescription(), AvailableCommand.AttachedObject.NONE);
+	}
 }

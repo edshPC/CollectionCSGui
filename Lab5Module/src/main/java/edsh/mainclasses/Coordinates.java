@@ -3,26 +3,26 @@ package edsh.mainclasses;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import edsh.exeptions.WrongFieldExeption;
+import edsh.exeptions.WrongFieldException;
 
 public class Coordinates {
     private final float x; //Максимальное значение поля: 542
     private final Integer y; //Максимальное значение поля: 203, Поле не может быть null
     
-    public Coordinates(float x, int y) throws WrongFieldExeption {
+    public Coordinates(float x, int y) throws WrongFieldException {
     	if(x > 542 || y > 203)
-    		throw new WrongFieldExeption("Недопустимое значение поля");
+    		throw new WrongFieldException("Недопустимое значение поля");
     	this.x = x;
     	this.y = y;
     }
     
-    public Coordinates(JSONObject jObj) throws WrongFieldExeption {
+    public Coordinates(JSONObject jObj) throws WrongFieldException {
     	
     	try {
     		this.x = jObj.getFloat("x");
         	this.y = jObj.getInt("y");
 		} catch (JSONException e) {
-			throw new WrongFieldExeption("Ошибка в получении поля");
+			throw new WrongFieldException("Ошибка в получении поля");
 		}
     }
     

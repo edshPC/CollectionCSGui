@@ -1,7 +1,9 @@
 package edsh.command;
 
 
+import edsh.exeptions.ExitExecutedException;
 import edsh.helpers.CommandHelper;
+
 
 public class ExitCmd extends AbstractCommand {
 
@@ -10,11 +12,10 @@ public class ExitCmd extends AbstractCommand {
 	}
 	
 	@Override
-	public String execute(String[] args) {
-		System.out.println("Выход из программы");
+	public String execute(String[] args) throws ExitExecutedException {
 		sc.close();
-		System.exit(0);
-		return "Программа завершена";
+		throw new ExitExecutedException(0);
+		//return "Программа завершена";
 	}
 
 }

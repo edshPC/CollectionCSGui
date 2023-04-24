@@ -29,6 +29,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>edsh.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

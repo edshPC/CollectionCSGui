@@ -1,14 +1,22 @@
 package edsh.network;
 
+import edsh.helpers.ClientCommandHelper;
+import edsh.helpers.ConsolePrinter;
+import edsh.helpers.Printer;
+import lombok.Getter;
+
 import java.io.*;
 import java.net.Socket;
-import java.nio.ByteBuffer;
-import java.util.Arrays;
 
 public class NetworkHandler {
+    private final Printer printer = new ConsolePrinter();
     private final String address;
     private final int port;
+    @Getter
+    private boolean isConnected = false;
     private Socket socket;
+    private ObjectInputStream input;
+    private ObjectOutputStream output;
 
     public NetworkHandler(String address, int port) {
         this.address = address;
@@ -18,33 +26,44 @@ public class NetworkHandler {
     public boolean connect() {
         try {
             socket = new Socket(address, port);
-            System.out.println("Сокет создан");
+            input = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
+            output = new ObjectOutputStream(new BufferedOutputStream(socket.getOutputStream()));
+            printer.println("Подключение к серверу успешно");
+
+            isConnected = socket.isConnected();
             return true;
         } catch (IOException e) {
-            System.err.println("Ошибка подключения: " + e.getMessage());
+            printer.errPrintln("Ошибка подключения: " + e.getMessage());
         }
         return false;
     }
 
     public void send(Request o) {
         try {
-            BufferedOutputStream buf = new BufferedOutputStream(socket.getOutputStream());
-            ObjectOutputStream oos = new ObjectOutputStream(buf);
-            oos.writeObject(o);
-            oos.flush();
+            output.writeObject(o);
+            output.flush();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            printer.errPrintln("Ошибка отправки запроса: " + e.getMessage());
+            disconnect();
         }
     }
 
     public Response accept() {
         try {
-            BufferedInputStream buf = new BufferedInputStream(socket.getInputStream());
-            ObjectInputStream ois = new ObjectInputStream(buf);
-            return (Response) ois.readObject();
+            return (Response) input.readObject();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            printer.errPrintln("Ошибка получения ответа: " + e.getMessage());
+            disconnect();
         }
+        return new Response(Response.Status.ERROR, "");
+    }
+
+    public void disconnect() {
+        try {
+            if(!socket.isClosed()) socket.close();
+        } catch (IOException ignored) {}
+        isConnected = false;
+        printer.println("Отключено от сервера");
     }
 
 }

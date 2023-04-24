@@ -3,6 +3,7 @@ package edsh.helpers;
 import java.util.*;
 
 import edsh.command.*;
+import edsh.exeptions.ExitExecutedException;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -69,7 +70,6 @@ public class CommandHelper {
 	 * Начинает ожидание ввода и исполнение команды пользователя, считывая через собственный {@link Scanner}
 	 */
 	public boolean executeNextCommand() {
-		//System.out.print("> ");
 		Printer console = new ConsolePrinter();
 		MyScanner sc = holder.getScanner();
 		try {
@@ -77,16 +77,15 @@ public class CommandHelper {
 			if(!sc.isConsole())
 				console.println(cmdStr);
 			String[] cmd = cmdStr.split(" +");
-			String[] args = null;
+			String[] args = ArgsHelper.fromSplitedCommand(cmd).getArgs();
 
-			if(cmd.length > 1) {
-				args = Arrays.copyOfRange(cmd, 1, cmd.length);
-			}
 			if(cmd.length > 0 && !cmd[0].isEmpty()) {
 				executeCommand(cmd[0], args, console);
 			}
 		} catch (NoSuchElementException e) {
 			console.errPrintln("Ввод команд был прерван");
+			return false;
+		} catch (ExitExecutedException e) {
 			return false;
 		}
 		return true;

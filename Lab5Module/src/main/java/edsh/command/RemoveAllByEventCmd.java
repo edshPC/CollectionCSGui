@@ -1,6 +1,6 @@
 package edsh.command;
 
-import edsh.exeptions.WrongFieldExeption;
+import edsh.exeptions.WrongFieldException;
 import edsh.helpers.CommandHelper;
 import edsh.mainclasses.Event;
 import edsh.mainclasses.Ticket;
@@ -20,8 +20,8 @@ public class RemoveAllByEventCmd extends AbstractCommand {
 		System.out.println("Задай событие, по которому удалить билет:");
 		Event ev = null;
 		try {
-			ev = Event.create(sc);
-		} catch (WrongFieldExeption e) {
+			ev = Event.getFactory().create(sc);
+		} catch (WrongFieldException e) {
 			System.err.println("Ошибка в создании события: " + e.getMessage());
 			return "Событие не содано, ничего не удалено";
 		}

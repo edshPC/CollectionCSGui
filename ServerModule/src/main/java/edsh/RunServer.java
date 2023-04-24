@@ -1,21 +1,30 @@
 package edsh;
 
-import edsh.command.ExitCmd;
-import edsh.command.HelpCmd;
 import edsh.helpers.*;
-import edsh.mainclasses.Ticket;
 import edsh.network.ServerNetworkHandler;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class RunServer {
     public static void main(String[] args) {
         Printer printer = new LoggerPrinter("Main");
-        ServerNetworkHandler handler = new ServerNetworkHandler(19825);
-        FileHelper fh = new FileHelper("sources.json", printer);
+        HashMap<Character, String> arguments = new ArgsHelper(args).parseKeyArguments();
+        int port = 19825; String filename = "source.json";
+        if(arguments.containsKey('p')) {
+            try {
+                port = Integer.parseInt(arguments.get('p'));
+            } catch (NumberFormatException e) {
+                printer.errPrintln("Ошибка в записи порта");
+            }
+        }
+        if(arguments.containsKey('f')) filename = arguments.get('f');
+
+        ServerNetworkHandler handler = new ServerNetworkHandler(port);
+        FileHelper fh = new FileHelper(filename, new LoggerPrinter("FileHelper"));
 
         int loaded = ListHelper.load(fh);
         if(loaded >= 0) {
@@ -26,10 +35,10 @@ public class RunServer {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
              MyScanner sc = new MyScanner(new Scanner(br), true)) {
 
-            RequestCommandHelper commandHelper = new RequestCommandHelper(sc, fh);
+            ServerCommandHelper commandHelper = new ServerCommandHelper(sc, fh);
             commandHelper.registerAllCommands();
             if (!handler.open(commandHelper)) return;
-            printer.println("Сервер запущен");
+            printer.println("Сервер запущен на порте " + port);
 
 
             while (!br.ready() || commandHelper.executeNextCommand()) {
@@ -40,5 +49,6 @@ public class RunServer {
             printer.errPrintln("Ошибка в селекторе: " + e.getMessage());
         }
         handler.close();
+        printer.println("Сервер остановлен");
     }
 }

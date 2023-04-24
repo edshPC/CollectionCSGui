@@ -1,5 +1,6 @@
 package edsh.helpers;
 
+import edsh.network.AvailableCommandsPacket;
 import edsh.network.Response;
 import lombok.Setter;
 
@@ -31,6 +32,11 @@ public class ResponsePrinter implements Printer {
     @Override
     public void errPrintln(String str) {
         response = new Response(Response.Status.ERROR, str + '\n');
+        sendTo(client);
+    }
+
+    public void sendAvailableCommands(AvailableCommandsPacket pkt) {
+        response = new Response(pkt);
         sendTo(client);
     }
 

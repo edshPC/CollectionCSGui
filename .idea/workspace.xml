@@ -4,45 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Modules creation">
-      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/CommandHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ListHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/RequestCommandHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ResponsePrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/RequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/20-04-2023.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/22-04-2023.log" afterDir="false" />
+    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Command system rework">
+      <change afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/EventRequestCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/RequestCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/SimpleRequestCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/TicketRequestCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/helpers/ClientCommandHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommandBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ClientAvailable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/exeptions/ExitExecutedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ArgsHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/EventFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/MainclassFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/TicketFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/AvailableCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/AvailableCommandsPacket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/23-04-2023.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/network/NetworkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/network/NetworkHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AddCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AddCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ClearCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ClearCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/CommandHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExecuteScriptCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExecuteScriptCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExitCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExitCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/FilterContainsCommentCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/FilterContainsCommentCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/HelpCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/HelpCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/InfoCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/InfoCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/PrintUniquePriceCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/PrintUniquePriceCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveAllByEventCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveAllByEventCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveByIdCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveByIdCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveFirstCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveFirstCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveGreaterCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveGreaterCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveLowerCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveLowerCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SaveCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SaveCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ShowCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ShowCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SortCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SortCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/enums/TicketType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/enums/TicketType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/exeptions/WrongFieldExeption.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/exeptions/WrongFieldException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/CommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/CommandHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/FileHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/FileHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/MyScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/MyScanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/JsonHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/JsonHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Coordinates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/RunServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/RunServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/RequestCommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ServerCommandHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ResponsePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ResponsePrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/RequestHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/ServerNetworkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/ServerNetworkHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
     </list>
@@ -54,8 +54,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Tag Library Descriptor" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -108,8 +108,11 @@
       <recent name="C:\Users\edshh\IDEA\CollectionsClientServer\ServerModule\src\main\resources" />
       <recent name="C:\Users\edshh\IDEA\CollectionsClientServer\Lab5Module" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edsh.command" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.RunServer">
+  <component name="RunManager" selected="Application.RunClient">
     <configuration name="RunClient" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="edsh.RunClient" />
       <module name="ClientModule" />
@@ -124,6 +127,33 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Compile Lab5" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="compile" />
+                <option value="jar:jar" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/Lab5Module" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="Compile Server" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -167,6 +197,7 @@
       <item itemvalue="Application.RunServer" />
       <item itemvalue="Application.RunClient" />
       <item itemvalue="Maven.Compile Server" />
+      <item itemvalue="Maven.Compile Lab5" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -198,7 +229,8 @@
       <workItem from="1682008525613" duration="745000" />
       <workItem from="1682184783489" duration="8648000" />
       <workItem from="1682196482914" duration="235000" />
-      <workItem from="1682237885790" duration="19706000" />
+      <workItem from="1682237885790" duration="32024000" />
+      <workItem from="1682345236141" duration="13719000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1680622399634</created>
@@ -214,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682008548659</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Command system rework">
+      <created>1682263312744</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682263312744</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +263,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First" />
     <MESSAGE value="Modules creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modules creation" />
+    <MESSAGE value="Command system rework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Command system rework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

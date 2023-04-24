@@ -1,17 +1,13 @@
 package edsh.mainclasses;
 import java.time.ZonedDateTime;
-import java.util.NoSuchElementException;
 
-import edsh.helpers.ConsolePrinter;
 import edsh.helpers.ListHelper;
-import edsh.helpers.Printer;
 import lombok.Getter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import edsh.enums.TicketType;
-import edsh.exeptions.WrongFieldExeption;
-import edsh.helpers.MyScanner;
+import edsh.exeptions.WrongFieldException;
 
 @Getter
 public class Ticket implements Comparable<Ticket> {
@@ -25,13 +21,15 @@ public class Ticket implements Comparable<Ticket> {
     private final Event event; //Поле не может быть null
 
     private static long lastId = 0;
+	@Getter
+	private static final MainclassFactory<Ticket> factory = new TicketFactory();
     
-    public Ticket(String name, Coordinates coordinates, long price, String comment, TicketType type, Event event) throws WrongFieldExeption {
+    public Ticket(String name, Coordinates coordinates, long price, String comment, TicketType type, Event event) throws WrongFieldException {
 		id = ++lastId;
 		creationDate = ZonedDateTime.now();
 		
 		if(name == null || name.isBlank() || coordinates == null || price <= 0 || type == null || event == null)
-			throw new WrongFieldExeption("Недопустимое значение поля");
+			throw new WrongFieldException("Недопустимое значение поля");
 			//return;
 		
 		this.name = name;
@@ -43,7 +41,7 @@ public class Ticket implements Comparable<Ticket> {
 		
 	}
    
-    public Ticket(JSONObject jObj) throws WrongFieldExeption {
+    public Ticket(JSONObject jObj) throws WrongFieldException {
     	try {
     		this.id = jObj.getLong("id");
         	this.name = jObj.getString("name");
@@ -54,7 +52,7 @@ public class Ticket implements Comparable<Ticket> {
     		this.type = TicketType.valueOf(jObj.getString("type"));
     		this.event = new Event(jObj.getJSONObject("event"));
 		} catch (JSONException e) {
-			throw new WrongFieldExeption("Ошибка в получении поля");
+			throw new WrongFieldException("Ошибка в получении поля");
 		}
     	lastId = Math.max(lastId, this.id);
     }
@@ -113,100 +111,6 @@ public class Ticket implements Comparable<Ticket> {
 	}
 
     
-    /**
-     * Начинает создание нового объекта билета, используя данный сканер
-     * @param sc Сканер, который берет информацию
-     * @return Новый объект класса {@link Ticket}
-     * @throws WrongFieldExeption Если поля у созданного объекта неверные
-     * @throws NoSuchElementException Если ввод полей отменен
-     */
-    public static Ticket create(MyScanner sc) throws WrongFieldExeption, NoSuchElementException {
-		Printer printer = new ConsolePrinter();
-    	boolean needReask = sc.isConsole();
-    	String ticketName = "";
-		do {
-			printer.print("Введи имя билета:\n>> ");
-			ticketName = sc.nextLine();
-			if(!needReask)
-				printer.println(ticketName);
-			if(ticketName.isBlank()) {
-				printer.errPrintln("Имя билета не должно быть пустым");
-				continue;
-			}
-			break;
-		} while(needReask);
-		
-		Coordinates coords = null;
-		do {
-			printer.print("Введи координаты места через запятую (x - float <= 542, y - int <= 203, пример: '10.2, 20'):\n>> ");
-			String coordsStr = sc.nextLine();
-			if(!needReask)
-				printer.println(coordsStr);
-			String[] coordsSplit = coordsStr.split(", ");
-			try {
-				float x = Float.parseFloat(coordsSplit[0]);
-				int y = Integer.parseInt(coordsSplit[1]);
-				coords = new Coordinates(x, y);
-				break;
-			} catch (NumberFormatException | IndexOutOfBoundsException | WrongFieldExeption e) {
-				printer.errPrintln("Ошибка при вводе координат: " + e.getMessage());
-			}
-		} while(needReask);
-		
-		long price = 0;
-		do {
-			printer.print("Введи цену билета (число > 0):\n>> ");
-			String priceStr = sc.nextLine();
-			if(!needReask)
-				printer.println(priceStr);
-			try {
-				price = Long.parseLong(priceStr);
-				if(price <= 0) {
-					printer.errPrintln("Цена должна быть > 0");
-					continue;
-				}
-				break;
-			} catch (NumberFormatException e) {
-				printer.errPrintln("Ошибка при вводе цены: " + e.getMessage());
-			}
-		} while(needReask);
-		
-		printer.print("Введи комментарий:\n>> ");
-		String comment = sc.nextLine();
-		if(!needReask)
-			printer.println(comment);
-		
-		TicketType type = null;
-		do {
-			printer.println("Введи номер типа билета, доступные типы:");
-			TicketType[] values = TicketType.values();
-			for(int i=0; i<values.length; i++) {
-				printer.println(" " + (i+1) + ". " + values[i]);
-			}
-			printer.print(">> ");
-			String strId = sc.nextLine();
-			if(!needReask)
-				printer.println(strId);
-			try {
-				int id = Integer.parseInt(strId);
-				type = values[id-1];
-				break;
-			} catch (NumberFormatException | IndexOutOfBoundsException e) {
-				printer.errPrintln("Ошибка при вводе типа: " + e.getMessage());
-			}
-		} while(needReask);
-		
-		Event event = null;
-		do {
-			try {
-				event = Event.create(sc);
-				break;
-			} catch (Exception e) {
-				printer.errPrintln("Ошибка при создании события: " + e.getMessage());
-			}
-		} while(needReask);
-		
-    	return new Ticket(ticketName, coords, price, comment, type, event);
-    }
+
        
 }

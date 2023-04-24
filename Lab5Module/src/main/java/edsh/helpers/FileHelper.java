@@ -56,8 +56,9 @@ public class FileHelper {
 		try (Scanner sc = new Scanner(filePath)) {
 			sc.useDelimiter("\\Z");
 			source += sc.next();
+			printer.println("Файл '" + filePath.getFileName() + "' загружен");
 		} catch (IOException e) {
-			printer.errPrintln("Файл не найден. Лист объектов пуст");
+			printer.errPrintln("Файл '" + filePath.getFileName() + "' не найден. Лист объектов пуст");
 			return false;
 		}
 	

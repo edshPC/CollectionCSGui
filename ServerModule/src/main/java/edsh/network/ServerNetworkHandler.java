@@ -2,7 +2,7 @@ package edsh.network;
 
 import edsh.helpers.LoggerPrinter;
 import edsh.helpers.Printer;
-import edsh.helpers.RequestCommandHelper;
+import edsh.helpers.ServerCommandHelper;
 import lombok.SneakyThrows;
 
 import java.io.*;
@@ -23,7 +23,7 @@ public class ServerNetworkHandler {
         this.port = port;
     }
 
-    public boolean open(RequestCommandHelper commandHelper) {
+    public boolean open(ServerCommandHelper commandHelper) {
         try {
             selector = Selector.open();
             requestHandler = new RequestHandler(commandHelper);
@@ -69,6 +69,7 @@ public class ServerNetworkHandler {
             SocketChannel client = servSocket.accept();
             client.configureBlocking(false);
             client.register(selector, SelectionKey.OP_READ);
+            requestHandler.sendAvailableCommandsTo(client.keyFor(selector));
             printer.println("Подключен клиент " + client.getRemoteAddress().toString());
         } catch (Exception e) {
             printer.errPrintln("Ошибка в создании подключения: " + e.getMessage());

@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 import edsh.helpers.*;
 
-//lombok - for auto getters/setters
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -29,7 +27,7 @@ public class Main {
 		commandHelper.registerAllCommands();
 
 		while(commandHelper.executeNextCommand());
-
+		printer.println("Программа завершена");
 
 	}
 

@@ -1,21 +1,32 @@
 package edsh.network;
 
 import edsh.helpers.Printer;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.io.Serializable;
 
 @Getter
-@AllArgsConstructor
 public class Response implements Serializable {
+
     public enum Status {
         OK,
-        ERROR
+        ERROR,
+        AVAILABLE_COMMANDS
     }
 
     private final Status status;
-    private final String response;
+    private String response;
+    private AvailableCommandsPacket availableCommands;
+
+    public Response(Status status, String response) {
+        this.status = status;
+        this.response = response;
+    }
+
+    public Response(AvailableCommandsPacket pkt) {
+        availableCommands = pkt;
+        status = Status.AVAILABLE_COMMANDS;
+    }
 
     public void print(Printer printer) {
         switch (status) {
