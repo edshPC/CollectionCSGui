@@ -1,16 +1,18 @@
 package edsh.helpers;
 
-import edsh.command.RequestCommand;
-import edsh.command.SimpleRequestCmd;
+import edsh.command.*;
 import edsh.network.AvailableCommand;
 import edsh.network.NetworkHandler;
 import edsh.network.Request;
 import edsh.network.Response;
+import lombok.Getter;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
+@Getter
 public class ClientCommandHelper extends CommandHelper {
+
     private final HashMap<String, RequestCommand> requestCommands = new HashMap<>();
     private final NetworkHandler handler;
 
@@ -25,6 +27,7 @@ public class ClientCommandHelper extends CommandHelper {
     public void registerAvailableCommands() {
         Printer printer = new ConsolePrinter();
         Response response = handler.accept();
+        requestCommands.clear();
         if(response.getStatus() != Response.Status.AVAILABLE_COMMANDS) {
             printer.errPrintln("Некорректный пакет доспупных команд");
             handler.disconnect();
@@ -32,14 +35,22 @@ public class ClientCommandHelper extends CommandHelper {
         }
 
         for(AvailableCommand availableCommand : response.getAvailableCommands().getCommands()) {
-            RequestCommand cmd = new SimpleRequestCmd(availableCommand);
+            RequestCommand cmd = new RequestCmd(availableCommand, getHolder());
             requestCommands.put(cmd.getName(), cmd);
         }
     }
 
+    public void registerAllClientCommands() {
+        registerCommands(new ExitCmd(getHolder()),
+                new ClientHelpCmd(this),
+                new ConnectCmd(this),
+                new DisconnectCmd(this),
+                new ExecuteScriptCmd(this));
+    }
+
     @Override
     public boolean executeCommand(String commandStr, String[] args, Printer printer) {
-        if(!requestCommands.containsKey(commandStr) || !handler.isConnected()) {
+        if(!handler.isConnected() || !requestCommands.containsKey(commandStr)) {
             return super.executeCommand(commandStr, args, printer);
         }
         RequestCommand command = requestCommands.get(commandStr);

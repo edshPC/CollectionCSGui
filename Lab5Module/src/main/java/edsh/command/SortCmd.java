@@ -2,8 +2,9 @@ package edsh.command;
 
 import edsh.helpers.CommandHelper;
 import edsh.helpers.ListHelper;
+import edsh.network.AvailableCommand;
 
-public class SortCmd extends AbstractCommand {
+public class SortCmd extends AbstractCommand implements ClientAvailable {
 	
 	public SortCmd(CommandHelper.Holder h) {
 		super(h, "sort", ": отсортировать коллекцию");
@@ -15,6 +16,11 @@ public class SortCmd extends AbstractCommand {
 		ListHelper.sortList();
 		
 		return "Коллекция отсортирована";
+	}
+
+	@Override
+	public AvailableCommand makeAvailable() {
+		return new AvailableCommand(getName(), getDescription(), AvailableCommand.AttachedObject.NONE);
 	}
 
 }

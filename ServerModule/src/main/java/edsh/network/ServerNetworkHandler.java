@@ -118,7 +118,8 @@ public class ServerNetworkHandler {
             if(client.write(bb) <= 0) return false;
             key.interestOps(SelectionKey.OP_READ); //После записи разрешаем только читать
 
-            printer.println("Ответ отправлен клиенту " + client.getRemoteAddress().toString());
+            printer.println(((Response) response).getStatus().name()
+                    + "-ответ отправлен клиенту " + client.getRemoteAddress().toString());
             return true;
         } catch (Exception e) {
             printer.errPrintln("Ошибка в отправке ответа: " + e.getMessage());

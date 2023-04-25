@@ -1,55 +1,122 @@
-17:52:54 INFO | FileHelper >> Файл 'source.json' загружен
-17:52:54 INFO | Main >> Загружено 1 элементов в коллекцию
-17:52:54 INFO | Main >> Сервер запущен на порте 19825
-17:53:24 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:50839
-17:53:24 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:50839
-17:54:02 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:50846
-17:54:02 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:50846
-17:58:46 INFO | FileHelper >> Файл 'source.json' загружен
-17:58:46 INFO | Main >> Загружено 1 элементов в коллекцию
-17:58:46 INFO | Main >> Сервер запущен на порте 19825
-17:58:50 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:50878
-17:58:50 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:50878
-18:21:34 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:50992
-18:25:17 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:50992
-18:25:32 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:51001
-18:26:03 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:51001
-18:26:07 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:51006
-18:29:44 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:51006
-18:29:50 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:51073
-18:33:36 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:51073
-18:33:41 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:51095
-18:33:51 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:51098
-20:44:24 INFO | FileHelper >> Файл 'source.json' загружен
-20:44:24 INFO | Main >> Загружено 1 элементов в коллекцию
-20:44:24 INFO | Main >> Сервер запущен на порте 19825
-20:44:30 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:52669
-20:44:30 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52669
-20:45:11 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:52669
-21:13:02 INFO | FileHelper >> Файл 'source.json' загружен
-21:13:02 INFO | Main >> Загружено 1 элементов в коллекцию
-21:13:02 INFO | Main >> Сервер запущен на порте 19825
-21:13:07 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:52777
-21:13:07 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52777
-21:13:24 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:52777
-21:14:26 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:52783
-21:14:26 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52783
-21:14:40 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:52783
-21:15:30 INFO | Execute >> add
-21:15:30 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52783
-21:15:30 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:52783
-21:16:43 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:52797
-21:16:43 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52797
-21:17:18 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:52797
-21:17:40 INFO | Execute >> add
-21:17:40 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52797
-21:17:40 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:52797
-21:20:38 INFO | FileHelper >> Файл 'source.json' загружен
-21:20:38 INFO | Main >> Загружено 1 элементов в коллекцию
-21:20:38 INFO | Main >> Сервер запущен на порте 19825
-21:20:42 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:52815
-21:20:42 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52815
-21:20:58 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:52815
-21:20:58 INFO | Execute >> show
-21:20:58 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52815
-21:20:58 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:52815
+14:58:21 INFO | FileHelper >> Файл 'source.json' загружен
+14:58:21 INFO | Main >> Загружено 1 элементов в коллекцию
+14:58:22 INFO | Main >> Сервер запущен на порте 19825
+14:58:25 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63047
+14:58:25 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63047
+14:58:56 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:63047
+15:31:27 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63256
+15:31:27 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63256
+15:31:35 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:63256
+15:31:57 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63260
+15:31:57 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63260
+15:32:12 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:63260
+15:32:12 INFO | Execute >> show
+15:32:12 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63260
+15:32:12 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:63260
+16:17:32 INFO | FileHelper >> Файл 'source.json' загружен
+16:17:32 INFO | Main >> Загружено 1 элементов в коллекцию
+16:17:32 INFO | Main >> Сервер запущен на порте 19825
+16:17:51 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63389
+16:17:51 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63389
+16:18:13 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:63389
+16:18:37 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63394
+16:18:37 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63394
+16:22:12 INFO | FileHelper >> Файл 'source.json' загружен
+16:22:12 INFO | Main >> Загружено 1 элементов в коллекцию
+16:22:13 INFO | Main >> Сервер запущен на порте 19825
+16:22:22 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63405
+16:22:22 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63405
+16:22:43 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:63405
+16:24:01 INFO | Main >> Сервер остановлен
+17:30:49 INFO | FileHelper >> Файл 'source.json' загружен
+17:30:49 INFO | Main >> Загружено 1 элементов в коллекцию
+17:30:49 INFO | Main >> Сервер запущен на порте 19825
+17:30:53 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63615
+17:30:53 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63615
+17:30:56 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:63615
+17:30:59 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63617
+17:30:59 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63617
+17:31:08 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:63617
+17:31:08 INFO | Execute >> show
+17:31:08 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63617
+17:31:08 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:63617
+17:31:13 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63618
+17:31:13 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63618
+17:32:03 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:63618
+17:44:34 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63646
+17:44:34 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63646
+17:44:47 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:63646
+17:45:12 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63651
+17:45:12 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63651
+17:45:26 ERROR| ServerNetworkHandler >> Ошибка в получении запроса: edsh.network.Request; local class incompatible: stream classdesc serialVersionUID = 4907165830673080384, local class serialVersionUID = -4455497623509121139
+17:45:26 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:63651
+17:46:02 INFO | FileHelper >> Файл 'source.json' загружен
+17:46:02 INFO | Main >> Загружено 1 элементов в коллекцию
+17:46:03 INFO | Main >> Сервер запущен на порте 19825
+17:46:15 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:63656
+17:46:15 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:63656
+17:46:28 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:63656
+18:49:01 INFO | FileHelper >> Файл 'source.json' загружен
+18:49:01 INFO | Main >> Загружено 1 элементов в коллекцию
+18:49:01 INFO | Main >> Сервер запущен на порте 19825
+18:49:04 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:64071
+18:49:04 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:64071
+18:49:07 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:64071
+18:49:11 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:64074
+18:49:11 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:64074
+18:54:35 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:64074
+18:54:35 INFO | Execute >> add
+18:54:35 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:64074
+18:54:35 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:64074
+18:57:51 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:64155
+18:57:51 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:64155
+18:57:51 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:64155
+19:00:03 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:64164
+19:00:03 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:64164
+19:00:13 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:64164
+19:00:17 INFO | FileHelper >> Файл 'source.json' загружен
+19:00:17 INFO | Main >> Загружено 1 элементов в коллекцию
+19:00:18 INFO | Main >> Сервер запущен на порте 19825
+19:00:26 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:64171
+19:00:26 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:64171
+19:00:57 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:64171
+19:00:57 INFO | Execute >> add
+19:00:57 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:64171
+19:01:57 INFO | Main >> Сервер остановлен
+19:52:11 INFO | FileHelper >> Файл 'source.json' загружен
+19:52:11 INFO | Main >> Загружено 1 элементов в коллекцию
+19:52:11 INFO | Main >> Сервер запущен на порте 19825
+19:52:27 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:64436
+19:52:27 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:64436
+19:54:05 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:64436
+19:54:08 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:64447
+19:54:08 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:64447
+19:54:25 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:64447
+19:54:25 INFO | Execute >> filter_contains_comment
+19:54:25 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:64447
+19:58:58 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:64447
+19:59:01 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:64475
+19:59:01 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:64475
+19:59:03 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:64475
+19:59:03 INFO | Execute >> show
+19:59:03 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:64475
+19:59:03 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:64475
+19:59:03 INFO | Execute >> info
+19:59:03 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:64475
+20:02:43 INFO | FileHelper >> Файл 'source.json' загружен
+20:02:43 INFO | Main >> Загружено 0 элементов в коллекцию
+20:02:43 INFO | Main >> Сервер запущен на порте 19825
+20:02:49 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:64497
+20:02:49 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:64497
+20:03:07 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:64497
+20:03:07 INFO | Execute >> info
+20:03:07 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:64497
+20:03:37 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:64497
+20:04:09 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:64501
+20:04:09 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:64501
+20:21:19 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:64501
+20:22:05 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:64558
+20:22:05 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:64558
+20:22:31 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:64558
+20:22:31 INFO | Execute >> info
+20:22:31 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:64558

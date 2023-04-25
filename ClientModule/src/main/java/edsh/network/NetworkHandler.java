@@ -1,6 +1,5 @@
 package edsh.network;
 
-import edsh.helpers.ClientCommandHelper;
 import edsh.helpers.ConsolePrinter;
 import edsh.helpers.Printer;
 import lombok.Getter;
@@ -15,8 +14,6 @@ public class NetworkHandler {
     @Getter
     private boolean isConnected = false;
     private Socket socket;
-    private ObjectInputStream input;
-    private ObjectOutputStream output;
 
     public NetworkHandler(String address, int port) {
         this.address = address;
@@ -24,10 +21,16 @@ public class NetworkHandler {
     }
 
     public boolean connect() {
+        if(address == null || port < 0) {
+            printer.errPrintln("Некорректно задан адрес/порт в аргументах");
+            return false;
+        }
+        return connect(address, port);
+    }
+
+    public boolean connect(String address, int port) {
         try {
             socket = new Socket(address, port);
-            input = new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
-            output = new ObjectOutputStream(new BufferedOutputStream(socket.getOutputStream()));
             printer.println("Подключение к серверу успешно");
 
             isConnected = socket.isConnected();
@@ -39,22 +42,29 @@ public class NetworkHandler {
     }
 
     public void send(Request o) {
-        try {
-            output.writeObject(o);
-            output.flush();
-        } catch (IOException e) {
-            printer.errPrintln("Ошибка отправки запроса: " + e.getMessage());
-            disconnect();
-        }
+        if(isConnected)
+            try {
+                ObjectOutputStream output =
+                        new ObjectOutputStream(new BufferedOutputStream(socket.getOutputStream()));
+                output.writeObject(o);
+                output.flush();
+            } catch (IOException e) {
+                printer.errPrintln("Ошибка отправки запроса: " + e.getMessage());
+                disconnect();
+            }
+        else printer.errPrintln("Вы не подключены к серверу");
     }
 
     public Response accept() {
-        try {
-            return (Response) input.readObject();
-        } catch (Exception e) {
-            printer.errPrintln("Ошибка получения ответа: " + e.getMessage());
-            disconnect();
-        }
+        if(isConnected)
+            try {
+                ObjectInputStream input =
+                        new ObjectInputStream(new BufferedInputStream(socket.getInputStream()));
+                return (Response) input.readObject();
+            } catch (Exception e) {
+                printer.errPrintln("Ошибка получения ответа: " + e.getMessage());
+                disconnect();
+            }
         return new Response(Response.Status.ERROR, "");
     }
 

@@ -8,7 +8,7 @@ import edsh.helpers.CommandHelper;
 public class ExitCmd extends AbstractCommand {
 
 	public ExitCmd(CommandHelper.Holder h) {
-		super(h, "exit", ": завершить программу (без сохранения в файл)");
+		super(h, "exit", ": завершить программу");
 	}
 	
 	@Override

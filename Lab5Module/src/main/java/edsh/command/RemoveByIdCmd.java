@@ -2,8 +2,9 @@ package edsh.command;
 
 import edsh.helpers.CommandHelper;
 import edsh.helpers.ListHelper;
+import edsh.network.AvailableCommand;
 
-public class RemoveByIdCmd extends AbstractCommand {
+public class RemoveByIdCmd extends AbstractCommand implements ClientAvailable {
 	
 	public RemoveByIdCmd(CommandHelper.Holder h) {
 		super(h, "remove_by_id", "{id} : удалить элемент из коллекции по его id");
@@ -25,6 +26,11 @@ public class RemoveByIdCmd extends AbstractCommand {
 		list.remove(index);
 		
 		return "Билет успешно удален!";
+	}
+
+	@Override
+	public AvailableCommand makeAvailable() {
+		return new AvailableCommand(getName(), getDescription(), AvailableCommand.AttachedObject.NONE, AvailableCommand.ArgType.LONG);
 	}
 
 }

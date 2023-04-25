@@ -2,6 +2,7 @@ package edsh.helpers;
 
 import edsh.command.ClientAvailable;
 import edsh.command.Command;
+import edsh.command.RequireAttachment;
 import edsh.network.AvailableCommandsPacket;
 import edsh.network.Request;
 
@@ -14,10 +15,13 @@ public class ServerCommandHelper extends CommandHelper {
     }
 
     public void executeRequest(Request request, Printer printer) {
-        String command = request.getCommand();
+        String cmd = request.getCommand();
         String[] args = request.getArgs();
-        if(executeCommand(command, args, printer)) {
-            logger.println(command);
+        if(getHolder().getCommands().get(cmd) instanceof RequireAttachment<?> command) {
+            command.setAttachment(request.getAttachment());
+        }
+        if(executeCommand(cmd, args, printer)) {
+            logger.println(cmd);
         }
     }
 

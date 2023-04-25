@@ -14,9 +14,9 @@ public class HelpCmd extends AbstractCommand {
 	
 	@Override
 	public String execute(String[] args) {
-		String out = "";
+		StringBuilder out = new StringBuilder();
 		for(Command command : commands.values()) {
-			out += '\n' + command.toString();
+			out.append('\n').append(command.toString());
 		}
 		return out.substring(1);
 	}

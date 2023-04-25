@@ -5,15 +5,17 @@ import java.util.*;
 import edsh.command.*;
 import edsh.exeptions.ExitExecutedException;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 public class CommandHelper {
 
 	@Getter
-	@RequiredArgsConstructor(access = AccessLevel.PRIVATE)
+	@AllArgsConstructor(access = AccessLevel.PROTECTED)
 	public static class Holder {
-		private final MyScanner scanner;
+		@Setter
+		private MyScanner scanner;
 		private final FileHelper fileHelper;
 		private final HashMap<String, Command> commands = new HashMap<>();
 	}
@@ -46,12 +48,12 @@ public class CommandHelper {
 	public void registerAllCommands() {
 		registerCommands(new HelpCmd(holder), new InfoCmd(holder), new ShowCmd(holder), new AddCmd(holder),
 				new UpdateCmd(holder), new RemoveByIdCmd(holder), new ClearCmd(holder), new SaveCmd(holder),
-				new ExecuteScriptCmd(holder), new ExitCmd(holder), new RemoveFirstCmd(holder),
+				new ExecuteScriptCmd(this), new ExitCmd(holder), new RemoveFirstCmd(holder),
 				new RemoveGreaterCmd(holder), new RemoveLowerCmd(holder), new RemoveAllByEventCmd(holder),
 				new FilterContainsCommentCmd(holder), new PrintUniquePriceCmd(holder), new SortCmd(holder));
 	}
 
-	public boolean executeCommand(String commandStr, String[] args, Printer printer) {
+	public boolean executeCommand(String commandStr, String[] args, Printer printer) throws NoSuchElementException, ExitExecutedException {
 		if(!holder.commands.containsKey(commandStr)) {
 			printer.errPrintln("Данной команды не существует. Введите 'help' для просмотра списка команд");
 			return false;

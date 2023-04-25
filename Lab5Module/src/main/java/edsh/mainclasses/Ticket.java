@@ -1,4 +1,5 @@
 package edsh.mainclasses;
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 
 import edsh.helpers.ListHelper;
@@ -10,7 +11,7 @@ import edsh.enums.TicketType;
 import edsh.exeptions.WrongFieldException;
 
 @Getter
-public class Ticket implements Comparable<Ticket> {
+public class Ticket implements Comparable<Ticket>, Serializable {
     private long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private final String name; //Поле не может быть null, Строка не может быть пустой
     private final Coordinates coordinates; //Поле не может быть null
@@ -25,7 +26,7 @@ public class Ticket implements Comparable<Ticket> {
 	private static final MainclassFactory<Ticket> factory = new TicketFactory();
     
     public Ticket(String name, Coordinates coordinates, long price, String comment, TicketType type, Event event) throws WrongFieldException {
-		id = ++lastId;
+		updateId();
 		creationDate = ZonedDateTime.now();
 		
 		if(name == null || name.isBlank() || coordinates == null || price <= 0 || type == null || event == null)
@@ -67,6 +68,10 @@ public class Ticket implements Comparable<Ticket> {
     		.put("price", price).put("comment", comment).put("type", type.name()).put("event", event.toJsonObject());
     	return jObj;
     }
+
+	public void updateId() {
+		id = ++lastId;
+	}
     
     @Override
     public String toString() {
@@ -103,8 +108,6 @@ public class Ticket implements Comparable<Ticket> {
      * @param t Билет, который нужно встроить
      */
     public static void putWithId(int index, long id, Ticket t) {
-		if (lastId == t.id)
-			lastId--;
 		t.id = id;
 		ListHelper.getList().set(index, t);
 		lastId = Math.max(lastId, id);

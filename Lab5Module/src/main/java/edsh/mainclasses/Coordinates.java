@@ -5,7 +5,9 @@ import org.json.JSONObject;
 
 import edsh.exeptions.WrongFieldException;
 
-public class Coordinates {
+import java.io.Serializable;
+
+public class Coordinates implements Serializable {
     private final float x; //Максимальное значение поля: 542
     private final Integer y; //Максимальное значение поля: 203, Поле не может быть null
     

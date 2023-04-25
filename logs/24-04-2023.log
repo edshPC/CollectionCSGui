@@ -1,0 +1,55 @@
+17:52:54 INFO | FileHelper >> Файл 'source.json' загружен
+17:52:54 INFO | Main >> Загружено 1 элементов в коллекцию
+17:52:54 INFO | Main >> Сервер запущен на порте 19825
+17:53:24 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:50839
+17:53:24 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:50839
+17:54:02 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:50846
+17:54:02 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:50846
+17:58:46 INFO | FileHelper >> Файл 'source.json' загружен
+17:58:46 INFO | Main >> Загружено 1 элементов в коллекцию
+17:58:46 INFO | Main >> Сервер запущен на порте 19825
+17:58:50 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:50878
+17:58:50 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:50878
+18:21:34 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:50992
+18:25:17 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:50992
+18:25:32 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:51001
+18:26:03 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:51001
+18:26:07 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:51006
+18:29:44 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:51006
+18:29:50 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:51073
+18:33:36 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:51073
+18:33:41 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:51095
+18:33:51 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:51098
+20:44:24 INFO | FileHelper >> Файл 'source.json' загружен
+20:44:24 INFO | Main >> Загружено 1 элементов в коллекцию
+20:44:24 INFO | Main >> Сервер запущен на порте 19825
+20:44:30 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:52669
+20:44:30 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52669
+20:45:11 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:52669
+21:13:02 INFO | FileHelper >> Файл 'source.json' загружен
+21:13:02 INFO | Main >> Загружено 1 элементов в коллекцию
+21:13:02 INFO | Main >> Сервер запущен на порте 19825
+21:13:07 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:52777
+21:13:07 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52777
+21:13:24 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:52777
+21:14:26 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:52783
+21:14:26 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52783
+21:14:40 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:52783
+21:15:30 INFO | Execute >> add
+21:15:30 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52783
+21:15:30 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:52783
+21:16:43 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:52797
+21:16:43 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52797
+21:17:18 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:52797
+21:17:40 INFO | Execute >> add
+21:17:40 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52797
+21:17:40 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:52797
+21:20:38 INFO | FileHelper >> Файл 'source.json' загружен
+21:20:38 INFO | Main >> Загружено 1 элементов в коллекцию
+21:20:38 INFO | Main >> Сервер запущен на порте 19825
+21:20:42 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:52815
+21:20:42 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52815
+21:20:58 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:52815
+21:20:58 INFO | Execute >> show
+21:20:58 INFO | ServerNetworkHandler >> Ответ отправлен клиенту /127.0.0.1:52815
+21:20:58 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:52815

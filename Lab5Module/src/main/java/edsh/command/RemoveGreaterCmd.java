@@ -2,8 +2,9 @@ package edsh.command;
 
 import edsh.helpers.CommandHelper;
 import edsh.helpers.ListHelper;
+import edsh.network.AvailableCommand;
 
-public class RemoveGreaterCmd extends AbstractCommand {
+public class RemoveGreaterCmd extends AbstractCommand implements ClientAvailable {
 	
 	public RemoveGreaterCmd(CommandHelper.Holder h) {
 		super(h, "remove_greater", "{id} : удалить из коллекции все элементы, превышающие заданный");
@@ -31,6 +32,11 @@ public class RemoveGreaterCmd extends AbstractCommand {
 		}
 		
 		return "Было удалено " + index + " билетов";
+	}
+
+	@Override
+	public AvailableCommand makeAvailable() {
+		return new AvailableCommand(getName(), getDescription(), AvailableCommand.AttachedObject.NONE, AvailableCommand.ArgType.LONG);
 	}
 
 }

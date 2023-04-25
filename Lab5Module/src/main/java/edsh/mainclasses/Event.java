@@ -29,7 +29,7 @@ public class Event implements Comparable<Event>, Serializable {
 	private static final MainclassFactory<Event> factory = new EventFactory();
     
     public Event(String name, LocalDate date, long minAge, long ticketsCount, EventType eventType) throws WrongFieldException {
-    	id = ++lastId;
+    	updateId();
     	
     	if(name == null || name.isEmpty() || ticketsCount <= 0 || eventType == null)
 			throw new WrongFieldException("Недопустимое значение поля");
@@ -65,6 +65,10 @@ public class Event implements Comparable<Event>, Serializable {
     		.put("ticketsCount", ticketsCount).put("eventType", eventType.name());
     	return jObj;
     }
+
+	public void updateId() {
+		id = ++lastId;
+	}
     
     @Override
     public String toString() {

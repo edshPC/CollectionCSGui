@@ -4,8 +4,10 @@ import edsh.exeptions.WrongFieldException;
 import edsh.helpers.CommandHelper;
 import edsh.helpers.ListHelper;
 import edsh.mainclasses.Ticket;
+import edsh.network.AvailableCommand;
 
-public class UpdateCmd extends AbstractCommand {
+public class UpdateCmd extends AbstractCommand implements ClientAvailable, RequireAttachment<Ticket> {
+	private Ticket attachment = null;
 
 	public UpdateCmd(CommandHelper.Holder h) {
 		super(h, "update", "{id} {element} : обновить значение элемента коллекции, id которого равен заданному");
@@ -23,14 +25,25 @@ public class UpdateCmd extends AbstractCommand {
 		if(index < 0)
 			return "!Не найден билет с данным id. Используйте add чтобы добавить новый";
 
-		try {
-			Ticket.putWithId(index, id, Ticket.getFactory().create(sc));
-		} catch (WrongFieldException e) {
-			System.err.println("Ошибка в создании билета: " + e.getMessage());
-			return "!Билет не обновлен";
-		}
+		if(attachment == null)
+			try {
+				attachment = Ticket.getFactory().create(sc);
+			} catch (WrongFieldException e) {
+				return "!Билет не обновлен";
+			}
+		Ticket.putWithId(index, id, attachment);
+		attachment = null;
 
 		return "Билет успешно обновлен!";
 	}
 
+	@Override
+	public AvailableCommand makeAvailable() {
+		return new AvailableCommand(getName(), getDescription(), AvailableCommand.AttachedObject.TICKET, AvailableCommand.ArgType.LONG);
+	}
+
+	@Override
+	public void setAttachment(Ticket ticket) {
+		attachment = ticket;
+	}
 }
