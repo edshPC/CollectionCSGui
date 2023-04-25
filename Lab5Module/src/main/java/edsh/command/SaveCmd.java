@@ -1,6 +1,7 @@
 package edsh.command;
 
 import edsh.helpers.CommandHelper;
+import edsh.helpers.ListHelper;
 import org.json.JSONArray;
 
 import edsh.helpers.JsonHelper;
@@ -14,14 +15,8 @@ public class SaveCmd extends AbstractCommand {
 	
 	@Override
 	public String execute(String[] args) {
-		JSONArray arr = new JSONArray();		
-		for(Ticket ticket : list) {
-			arr.put(ticket.toJsonObject());
-		}
-		JsonHelper jh = new JsonHelper(arr);
-		jh.stringifyJsonArr();
-		fh.setRawJson(jh.getRawJson());
-		if(fh.writeToFile())
+
+		if(ListHelper.save(fh))
 			return "Коллекция сохранена";
 		else
 			return "!Коллекция не сохранена";

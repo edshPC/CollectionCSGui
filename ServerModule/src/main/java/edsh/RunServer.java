@@ -49,6 +49,9 @@ public class RunServer {
             printer.errPrintln("Ошибка в селекторе: " + e.getMessage());
         }
         handler.close();
+        if(ListHelper.getList().size() > 0 && ListHelper.save(fh))
+            printer.println("Коллекция сохранена");
+
         printer.println("Сервер остановлен");
     }
 }

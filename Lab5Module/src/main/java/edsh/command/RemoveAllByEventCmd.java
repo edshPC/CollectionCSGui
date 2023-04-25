@@ -24,18 +24,12 @@ public class RemoveAllByEventCmd extends AbstractCommand implements ClientAvaila
 			} catch (WrongFieldException e) {
 				return "!Ошибка в создании события: " + e.getMessage();
 			}
-		
-		int count = 0;
-		
-		for(Iterator<Ticket> it = list.iterator(); it.hasNext();) {
-			Ticket ticket = it.next();
-			if(ticket.getEvent().equals(attachment)){
-				it.remove();
-				count++;
-			}
-		}
+
+		int sizeBefore = list.size();
+		list.removeIf(check -> check.getEvent().equals(attachment));
+
 		attachment = null;
-		
+		int count = sizeBefore - list.size();
 		if(count == 0)
 			return "!Не найдено билетов с таким событием";
 		

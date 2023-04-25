@@ -120,3 +120,36 @@
 20:22:31 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:64558
 20:22:31 INFO | Execute >> info
 20:22:31 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:64558
+21:05:16 INFO | FileHelper >> Файл 'source.json' загружен
+21:05:16 INFO | Main >> Загружено 0 элементов в коллекцию
+21:05:16 INFO | Main >> Сервер запущен на порте 19825
+21:07:03 INFO | FileHelper >> Файл 'source.json' загружен
+21:07:03 INFO | Main >> Загружено 2 элементов в коллекцию
+21:07:03 INFO | Main >> Сервер запущен на порте 19825
+21:09:08 INFO | FileHelper >> Файл 'source.json' загружен
+21:09:08 INFO | Main >> Загружено 2 элементов в коллекцию
+21:09:08 INFO | Main >> Сервер запущен на порте 19825
+21:10:15 INFO | FileHelper >> Файл 'source.json' загружен
+21:10:15 INFO | Main >> Загружено 2 элементов в коллекцию
+21:10:15 INFO | Main >> Сервер запущен на порте 19825
+21:11:29 INFO | FileHelper >> Файл 'source.json' загружен
+21:11:29 INFO | Main >> Загружено 2 элементов в коллекцию
+21:11:29 INFO | Main >> Сервер запущен на порте 19825
+21:11:43 INFO | Main >> Сервер остановлен
+22:04:34 INFO | FileHelper >> Файл 'source.json' загружен
+22:04:34 INFO | Main >> Загружено 2 элементов в коллекцию
+22:04:35 INFO | Main >> Сервер запущен на порте 19825
+22:04:50 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:51107
+22:04:50 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:51107
+22:05:04 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:51107
+22:05:04 INFO | Execute >> filter_contains_comment
+22:05:04 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:51107
+22:06:42 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:51107
+22:06:42 INFO | Execute >> filter_contains_comment
+22:06:42 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:51107
+22:06:46 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:51107
+22:06:46 INFO | Execute >> filter_contains_comment
+22:06:46 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:51107
+22:06:55 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:51107
+22:06:55 INFO | Execute >> filter_contains_comment
+22:06:55 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:51107

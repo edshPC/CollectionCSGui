@@ -14,11 +14,10 @@ public class ShowCmd extends AbstractCommand implements ClientAvailable {
 	public String execute(String[] args) {
 		if(list.size() == 0)
 			return "Коллекция пуста";
-		String out = "";
-		for(Ticket ticket : list) {
-			out += ticket + "\n";
-		}
-		return out.substring(0, out.length()-1);
+		StringBuilder out = new StringBuilder();
+		list.forEach(ticket -> out.append("\n").append(ticket));
+
+		return out.substring(1);
 	}
 
 	@Override

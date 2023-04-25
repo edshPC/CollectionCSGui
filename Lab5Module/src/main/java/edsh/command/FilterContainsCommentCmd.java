@@ -14,24 +14,21 @@ public class FilterContainsCommentCmd extends AbstractCommand implements ClientA
 	
 	@Override
 	public String execute(String[] args) {
-		String comment = "";
-		if(args != null && args.length > 0) {
-			for (int i = 0; i < args.length-1; i++) {
-				comment += args[i] + " ";
-			}
-			comment += args[args.length-1];
+		if(args == null || args.length == 0) {
+			return "!Слишком мало аргументов";
 		}
-			
-		
-		String out = "";
-		for(Ticket ticket : list) {
-			if(ticket.getComment().contains(comment))
-				out += ticket + "\n";
-		}
-		if(out.isEmpty())
+
+		String comment = args[0];
+
+		StringBuilder out = new StringBuilder();
+		list.stream()
+				.filter(ticket -> ticket.getComment().contains(comment))
+				.forEach(ticket -> out.append("\n").append(ticket));
+
+		if(out.length() == 0)
 			return "Нечего вывести";
 		
-		return "Билеты с данной строкой в комментарии:\n" + out.substring(0, out.length()-1);
+		return "Билеты с данной строкой в комментарии:\n" + out.substring(1);
 	}
 
 	@Override

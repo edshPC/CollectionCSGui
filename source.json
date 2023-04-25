@@ -1,1 +1,42 @@
-[]
+[
+    {
+        "price": 1,
+        "name": "name1",
+        "coordinates": {
+            "x": 1,
+            "y": 1
+        },
+        "comment": "1",
+        "id": 1,
+        "creationDate": "2023-04-25T21:05:42.041447200+03:00[Europe/Moscow]",
+        "type": "VIP",
+        "event": {
+            "date": "2000-10-10",
+            "ticketsCount": 1,
+            "minAge": 1,
+            "name": "1",
+            "id": 1,
+            "eventType": "CONCERT"
+        }
+    },
+    {
+        "price": 1,
+        "name": "name2",
+        "coordinates": {
+            "x": 1,
+            "y": 1
+        },
+        "comment": "1",
+        "id": 2,
+        "creationDate": "2023-04-25T21:05:56.793128400+03:00[Europe/Moscow]",
+        "type": "VIP",
+        "event": {
+            "date": "2001-10-10",
+            "ticketsCount": 1,
+            "minAge": 1,
+            "name": "1",
+            "id": 2,
+            "eventType": "CONCERT"
+        }
+    }
+]

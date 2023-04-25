@@ -78,7 +78,7 @@ public class CommandHelper {
 			String cmdStr = sc.nextLine().trim();
 			if(!sc.isConsole())
 				console.println(cmdStr);
-			String[] cmd = cmdStr.split(" +");
+			String[] cmd = cmdStr.split(" +(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)"); //Разделяем по пробелу не в кавычках
 			String[] args = ArgsHelper.fromSplitedCommand(cmd).getArgs();
 
 			if(cmd.length > 0 && !cmd[0].isEmpty()) {

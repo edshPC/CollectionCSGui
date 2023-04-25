@@ -38,7 +38,7 @@ public class RequestCmd extends AbstractCommandBase implements RequestCommand {
             for (int i = 0; i < argError-1; i++) {
                 spaceCount += args[i].length();
             }
-            int arrowCount = args[argError-1].length();
+            int arrowCount = Math.max(args[argError-1].length(), 1);
             String errPointer = String.join("", Collections.nCopies(spaceCount, " ")) +
                     String.join("", Collections.nCopies(arrowCount, "^"));
             printer.errPrintln(commandLine);

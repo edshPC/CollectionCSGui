@@ -4,42 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Send AvailableCommands">
-      <change afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/ClientHelpCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/ConnectCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/DisconnectCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RequireAttachment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/24-04-2023.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script.txt" afterDir="false" />
+    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="add Attached request object">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/EventRequestCmd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/SimpleRequestCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/RequestCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/TicketRequestCmd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/helpers/ClientCommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/helpers/ClientCommandHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/network/NetworkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/network/NetworkHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AddCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AddCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ClearCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ClearCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExecuteScriptCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExecuteScriptCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExitCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExitCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/RequestCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/RequestCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/FilterContainsCommentCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/FilterContainsCommentCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/HelpCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/HelpCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/InfoCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/InfoCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/PrintUniquePriceCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/PrintUniquePriceCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveAllByEventCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveAllByEventCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveByIdCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveByIdCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveGreaterCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveGreaterCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveLowerCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveLowerCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SortCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SortCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SaveCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SaveCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ShowCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ShowCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ArgsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ArgsHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/CommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/CommandHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/MainclassFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/MainclassFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ServerCommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ServerCommandHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/ServerNetworkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/ServerNetworkHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ListHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ListHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/RunServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/RunServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source.json" beforeDir="false" afterPath="$PROJECT_DIR$/source.json" afterDir="false" />
     </list>
@@ -109,7 +88,7 @@
       <recent name="edsh.command" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunServer">
+  <component name="RunManager" selected="Application.RunClient">
     <configuration name="RunClient" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="edsh.RunClient" />
       <module name="ClientModule" />
@@ -228,7 +207,7 @@
       <workItem from="1682196482914" duration="235000" />
       <workItem from="1682237885790" duration="32024000" />
       <workItem from="1682345236141" duration="13770000" />
-      <workItem from="1682423864844" duration="19280000" />
+      <workItem from="1682423864844" duration="25994000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1680622399634</created>
@@ -258,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682360539218</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add Attached request object">
+      <created>1682443463905</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682443463905</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +256,8 @@
     <MESSAGE value="Modules creation" />
     <MESSAGE value="Command system rework" />
     <MESSAGE value="Send AvailableCommands" />
-    <option name="LAST_COMMIT_MESSAGE" value="Send AvailableCommands" />
+    <MESSAGE value="add Attached request object" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Attached request object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

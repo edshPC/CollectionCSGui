@@ -1,6 +1,9 @@
 package edsh.command;
 
+import java.util.Collections;
+import java.util.Set;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 import edsh.helpers.CommandHelper;
 import edsh.mainclasses.Ticket;
@@ -16,13 +19,11 @@ public class PrintUniquePriceCmd extends AbstractCommand implements ClientAvaila
 	public String execute(String[] args) {
 		if(list.size() == 0)
 			return "Коллекция пуста";
-		
-		TreeSet<Long> prices = new TreeSet<>();
-		
-		for(Ticket ticket : list) {
-			prices.add(ticket.getPrice());
-		}
-		return "Надены билеты по следующим ценам:\n" + prices.toString();
+
+		TreeSet<Long> prices = list.stream().map(Ticket::getPrice)
+				.collect(Collectors.toCollection(TreeSet::new));
+
+		return "Надены билеты по следующим ценам:\n" + prices;
 	}
 
 	@Override

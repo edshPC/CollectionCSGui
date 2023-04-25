@@ -2,6 +2,7 @@ package edsh.command;
 
 import edsh.helpers.CommandHelper;
 import edsh.helpers.ListHelper;
+import edsh.mainclasses.Ticket;
 import edsh.network.AvailableCommand;
 
 public class RemoveLowerCmd extends AbstractCommand implements ClientAvailable {
@@ -14,23 +15,18 @@ public class RemoveLowerCmd extends AbstractCommand implements ClientAvailable {
 	public String execute(String[] args) {
 		long id;
 		try {
-			id = Long.parseLong(args[1]);
+			id = Long.parseLong(args[0]);
 		} catch (Exception e) {
 			return "!Не указан или указан неверно id элемента. Пожалуйста укажите id как число, пример: 'remove_lower 5'";
 		}
 
-		ListHelper.sortList();
-		int index = ListHelper.getIndexById(id);
-		if(index < 0)
-			return "!Не найден билет с данным id";
-		else if(index == list.size()-1)
-			return "!Не найдено билетов ниже данного";
+		Ticket ticket = ListHelper.getById(id);
+		if(ticket == null) return "!Не найден билет с данным id";
+
+		int sizeBefore = list.size();
+		list.removeIf(check -> check.compareTo(ticket) < 0);
 		
-		for (int i = index; i < list.size()-1; i++) {
-			list.removeLast();
-		}
-		
-		return "Было удалено " + index + " билетов";
+		return "Было удалено " + (sizeBefore - list.size()) + " билетов";
 	}
 
 	@Override

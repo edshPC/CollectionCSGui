@@ -29,9 +29,14 @@ public class ArgsHelper {
     }
 
     public static ArgsHelper fromSplitedCommand(String[] cmd) {
-        if(cmd.length > 1) {
-            return new ArgsHelper(Arrays.copyOfRange(cmd, 1, cmd.length));
+        String[] args = new String[cmd.length - 1];
+        for(int i = 1; i < cmd.length; i++) {
+            String test = cmd[i];
+            if(test.startsWith("\"") && test.endsWith("\""))
+                test = test.substring(1, test.length()-1);
+
+            args[i-1] = test;
         }
-        return new ArgsHelper(new String[0]);
+        return new ArgsHelper(args);
     }
 }
