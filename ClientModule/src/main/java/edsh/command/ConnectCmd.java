@@ -28,10 +28,9 @@ public class ConnectCmd extends AbstractCommand {
         } else {
             success = commandHelper.getHandler().connect();
         }
-        if(!success) {
+        if(!success || !commandHelper.registerAvailableCommands()) {
             return "!Не удалось подключиться к серверу";
         }
-        commandHelper.registerAvailableCommands();
         return "Серверные команды доступны";
     }
 }

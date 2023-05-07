@@ -13,7 +13,7 @@ public class InfoCmd extends AbstractCommand implements ClientAvailable {
 	
 	@Override
 	public String execute(String[] args) {
-		FileTime fileTime = fh.getCreationTime();
+		FileTime fileTime = holder.getFileHelper().getCreationTime();
 		String creationTime = "[не сохранена]";
 		if(fileTime != null) {
 			String[] times = fileTime.toString().split("[T.]");

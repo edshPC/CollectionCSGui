@@ -24,20 +24,21 @@ public class ClientCommandHelper extends CommandHelper {
     /**
      * Регистрирует данные команд с сервера, сохраняя ее имя и объект в {@link HashMap}
      */
-    public void registerAvailableCommands() {
+    public boolean registerAvailableCommands() {
         Printer printer = new ConsolePrinter();
         Response response = handler.accept();
         requestCommands.clear();
         if(response.getStatus() != Response.Status.AVAILABLE_COMMANDS) {
             printer.errPrintln("Некорректный пакет доспупных команд");
             handler.disconnect();
-            return;
+            return false;
         }
 
         for(AvailableCommand availableCommand : response.getAvailableCommands().getCommands()) {
             RequestCommand cmd = new RequestCmd(availableCommand, getHolder());
             requestCommands.put(cmd.getName(), cmd);
         }
+        return true;
     }
 
     public void registerAllClientCommands() {

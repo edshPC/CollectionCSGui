@@ -27,7 +27,7 @@ public class UpdateCmd extends AbstractCommand implements ClientAvailable, Requi
 
 		if(attachment == null)
 			try {
-				attachment = Ticket.getFactory().create(sc);
+				attachment = Ticket.getFactory().create(holder.getScanner());
 			} catch (WrongFieldException e) {
 				return "!Билет не обновлен";
 			}

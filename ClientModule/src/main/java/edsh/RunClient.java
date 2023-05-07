@@ -26,8 +26,8 @@ public class RunClient
         ClientCommandHelper commandHelper = new ClientCommandHelper(handler);
         commandHelper.registerAllClientCommands();
 
-        if(handler.connect()) commandHelper.registerAvailableCommands();
-        else printer.println("Программа работает в оффлайн-режиме");
+        if(!handler.connect() || !commandHelper.registerAvailableCommands())
+            printer.println("Программа работает в оффлайн-режиме");
 
         do {
             printer.print("> ");

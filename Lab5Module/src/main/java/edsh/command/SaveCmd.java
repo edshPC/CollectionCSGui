@@ -16,7 +16,7 @@ public class SaveCmd extends AbstractCommand {
 	@Override
 	public String execute(String[] args) {
 
-		if(ListHelper.save(fh))
+		if(ListHelper.save(holder.getFileHelper()))
 			return "Коллекция сохранена";
 		else
 			return "!Коллекция не сохранена";

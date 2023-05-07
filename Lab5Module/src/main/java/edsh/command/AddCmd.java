@@ -17,7 +17,7 @@ public class AddCmd extends AbstractCommand implements ClientAvailable, RequireA
 
 		if(attachment == null)
 			try {
-				attachment = Ticket.getFactory().create(sc);
+				attachment = Ticket.getFactory().create(holder.getScanner());
 			} catch (WrongFieldException e) {
 				return "!Ошибка в создании билета: " + e.getMessage();
 			}

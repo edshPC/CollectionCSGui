@@ -72,8 +72,8 @@ public class NetworkHandler {
         try {
             if(!socket.isClosed()) socket.close();
         } catch (IOException ignored) {}
+        if(isConnected) printer.println("Отключено от сервера");
         isConnected = false;
-        printer.println("Отключено от сервера");
     }
 
 }

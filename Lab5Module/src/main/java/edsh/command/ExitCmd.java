@@ -13,7 +13,7 @@ public class ExitCmd extends AbstractCommand {
 	
 	@Override
 	public String execute(String[] args) throws ExitExecutedException {
-		sc.close();
+		holder.getScanner().close();
 		throw new ExitExecutedException(0);
 		//return "Программа завершена";
 	}

@@ -20,7 +20,7 @@ public class RemoveAllByEventCmd extends AbstractCommand implements ClientAvaila
 
 		if(attachment == null)
 			try {
-				attachment = Event.getFactory().create(sc);
+				attachment = Event.getFactory().create(holder.getScanner());
 			} catch (WrongFieldException e) {
 				return "!Ошибка в создании события: " + e.getMessage();
 			}

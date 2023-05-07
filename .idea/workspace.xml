@@ -4,23 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="add Attached request object">
+    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Bug fixes">
+      <change afterPath="$PROJECT_DIR$/ServerModule/descriptor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/25-04-2023.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/RequestCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/RequestCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/FilterContainsCommentCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/FilterContainsCommentCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/PrintUniquePriceCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/PrintUniquePriceCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientModule/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/ConnectCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/ConnectCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/helpers/ClientCommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/helpers/ClientCommandHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/network/NetworkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/network/NetworkHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AddCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AddCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExitCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExitCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/HelpCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/HelpCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/InfoCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/InfoCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveAllByEventCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveAllByEventCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveByIdCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveByIdCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveGreaterCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveGreaterCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveLowerCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveLowerCmd.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SaveCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SaveCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ShowCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ShowCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ArgsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ArgsHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/CommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/CommandHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ListHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ListHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/RunServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/RunServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source.json" beforeDir="false" afterPath="$PROJECT_DIR$/source.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +92,12 @@
       <recent name="edsh.command" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunClient">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install assembly:single" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.Compile All">
     <configuration name="RunClient" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="edsh.RunClient" />
       <module name="ClientModule" />
@@ -104,34 +113,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Compile Lab5" type="MavenRunConfiguration" factoryName="Maven">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="clean" />
-                <option value="compile" />
-                <option value="jar:jar" />
-              </list>
-            </option>
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/Lab5Module" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
+    <configuration name="ServerModule.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/ServerModule/target/ServerModule.jar" />
       <method v="2" />
     </configuration>
-    <configuration name="Compile Server" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="Compile All" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -143,8 +129,7 @@
             <option name="goals">
               <list>
                 <option value="clean" />
-                <option value="compile" />
-                <option value="jar:jar" />
+                <option value="install" />
               </list>
             </option>
             <option name="pomFileName" />
@@ -152,7 +137,7 @@
               <map />
             </option>
             <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/ServerModule" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
@@ -172,9 +157,14 @@
     <list>
       <item itemvalue="Application.RunServer" />
       <item itemvalue="Application.RunClient" />
-      <item itemvalue="Maven.Compile Server" />
-      <item itemvalue="Maven.Compile Lab5" />
+      <item itemvalue="JAR Application.ServerModule.jar" />
+      <item itemvalue="Maven.Compile All" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.ServerModule.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -207,7 +197,10 @@
       <workItem from="1682196482914" duration="235000" />
       <workItem from="1682237885790" duration="32024000" />
       <workItem from="1682345236141" duration="13770000" />
-      <workItem from="1682423864844" duration="25994000" />
+      <workItem from="1682423864844" duration="27314000" />
+      <workItem from="1682492835208" duration="1369000" />
+      <workItem from="1682494227863" duration="5821000" />
+      <workItem from="1682585170565" duration="55000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1680622399634</created>
@@ -244,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682443463905</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Bug fixes">
+      <created>1682450402563</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682450402563</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +257,8 @@
     <MESSAGE value="Command system rework" />
     <MESSAGE value="Send AvailableCommands" />
     <MESSAGE value="add Attached request object" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Attached request object" />
+    <MESSAGE value="Bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
