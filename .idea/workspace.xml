@@ -4,27 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Bug fixes">
-      <change afterPath="$PROJECT_DIR$/ServerModule/descriptor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/25-04-2023.log" afterDir="false" />
+    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Last fixes">
+      <change afterPath="$PROJECT_DIR$/logs/26-04-2023.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/ConnectCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/ConnectCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/helpers/ClientCommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/helpers/ClientCommandHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/network/NetworkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/network/NetworkHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AddCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AddCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExitCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExitCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/HelpCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/HelpCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/InfoCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/InfoCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveAllByEventCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveAllByEventCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SaveCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SaveCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,25 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/edshh/IDEA/CollectionsClientServer/Lab5Module/pom.xml&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/edshh/IDEA/CollectionsClientServer/Lab5Module/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\edshh\IDEA\CollectionsClientServer\src\main\java\edsh" />
@@ -97,7 +81,7 @@
       <command value="mvn clean install assembly:single" />
     </option>
   </component>
-  <component name="RunManager" selected="Maven.Compile All">
+  <component name="RunManager" selected="Application.RunClient">
     <configuration name="RunClient" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="edsh.RunClient" />
       <module name="ClientModule" />
@@ -112,10 +96,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="ServerModule.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/ServerModule/target/ServerModule.jar" />
-      <method v="2" />
     </configuration>
     <configuration name="Compile All" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -157,14 +137,8 @@
     <list>
       <item itemvalue="Application.RunServer" />
       <item itemvalue="Application.RunClient" />
-      <item itemvalue="JAR Application.ServerModule.jar" />
       <item itemvalue="Maven.Compile All" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JAR Application.ServerModule.jar" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -201,6 +175,10 @@
       <workItem from="1682492835208" duration="1369000" />
       <workItem from="1682494227863" duration="5821000" />
       <workItem from="1682585170565" duration="55000" />
+      <workItem from="1683484827900" duration="201000" />
+      <workItem from="1683537017167" duration="937000" />
+      <workItem from="1683644534384" duration="465000" />
+      <workItem from="1683645017685" duration="124000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1680622399634</created>
@@ -244,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682450402563</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Last fixes">
+      <created>1683484913030</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683484913030</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +243,8 @@
     <MESSAGE value="Send AvailableCommands" />
     <MESSAGE value="add Attached request object" />
     <MESSAGE value="Bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes" />
+    <MESSAGE value="Last fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -269,5 +255,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

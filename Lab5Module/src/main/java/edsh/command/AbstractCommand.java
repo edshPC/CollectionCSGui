@@ -1,9 +1,7 @@
 package edsh.command;
 
 import edsh.helpers.CommandHelper;
-import edsh.helpers.FileHelper;
 import edsh.helpers.ListHelper;
-import edsh.helpers.MyScanner;
 import edsh.mainclasses.Ticket;
 
 import java.util.LinkedList;

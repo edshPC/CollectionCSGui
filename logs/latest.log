@@ -1,3 +1,47 @@
-10:48:14 INFO | FileHelper >> ���� 'source.json' ��������
-10:48:14 INFO | Main >> ��������� 2 ��������� � ���������
-10:48:14 INFO | Main >> ������ ������� �� ����� 19825
+12:21:10 INFO | FileHelper >> Файл 'source.json' загружен
+12:21:10 INFO | Main >> Загружено 2 элементов в коллекцию
+12:21:10 INFO | Main >> Сервер запущен на порте 19825
+12:21:17 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57294
+12:21:17 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57294
+12:22:31 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57294
+12:22:31 INFO | Execute >> filter_contains_comment
+12:22:31 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57294
+12:22:58 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57294
+12:22:58 INFO | Execute >> filter_contains_comment
+12:22:58 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57294
+12:24:08 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57294
+12:24:37 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57304
+12:24:37 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57304
+12:24:47 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57304
+12:25:01 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57306
+12:25:01 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57306
+12:25:06 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57309
+12:25:06 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57309
+12:25:07 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57313
+12:25:07 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57313
+12:25:08 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57317
+12:25:08 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57317
+12:25:09 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57321
+12:25:09 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57321
+12:25:16 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57306
+12:25:16 INFO | Execute >> show
+12:25:16 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57306
+12:25:18 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57309
+12:25:18 INFO | Execute >> show
+12:25:18 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57309
+12:25:21 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57313
+12:25:21 INFO | Execute >> show
+12:25:21 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57313
+12:25:24 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57317
+12:25:24 INFO | Execute >> info
+12:25:24 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57317
+12:25:26 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57321
+12:25:26 INFO | Execute >> show
+12:25:26 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57321
+12:25:37 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57306
+12:25:38 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57309
+12:25:40 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57313
+12:25:42 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57317
+12:25:43 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57321
+12:25:45 INFO | Main >> Коллекция сохранена
+12:25:45 INFO | Main >> Сервер остановлен
