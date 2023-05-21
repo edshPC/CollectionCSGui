@@ -44,6 +44,11 @@ public class DBServerCommandHelper extends ServerCommandHelper {
         return true;
     }
 
+    public boolean checkTicketOwner(long id, SelectionKey key) {
+        String login = getLogin(key);
+        return db.checkOwner(id, login);
+    }
+
     public String getLogin(SelectionKey key) {
         return users.get(key);
     }
@@ -60,9 +65,8 @@ public class DBServerCommandHelper extends ServerCommandHelper {
     @Override
     public void registerAllCommands() {
         registerCommands(new HelpCmd(getHolder()), new InfoCmd(getHolder()), new ShowCmd(getHolder()), new DBAddCmd(this),
-                new UpdateCmd(getHolder()), new RemoveByIdCmd(getHolder()), new ClearCmd(getHolder()), new SaveCmd(getHolder()),
-                new ExecuteScriptCmd(this), new ExitCmd(getHolder()), new RemoveFirstCmd(getHolder()),
-                new RemoveGreaterCmd(getHolder()), new RemoveLowerCmd(getHolder()), new RemoveAllByEventCmd(getHolder()),
+                new DBUpdateCmd(this), new DBRemoveByIdCmd(this), new DBClearCmd(this), new DBRemoveFirstCmd(this),
+                new DBRemoveGreaterCmd(this), new DBRemoveLowerCmd(this), new DBRemoveAllByEventCmd(this),
                 new FilterContainsCommentCmd(getHolder()), new PrintUniquePriceCmd(getHolder()), new SortCmd(getHolder()),
                 new DBLoginCmd(this), new DBLogoutCmd(this), new DBRegisterCmd(this));
     }

@@ -169,3 +169,156 @@
 17:36:57 INFO | Execute >> login
 17:36:57 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56585
 17:37:09 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:56585
+17:44:18 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+17:44:18 INFO | Main >> Загружено 3 элементов в коллекцию
+17:44:18 INFO | Main >> Сервер запущен на порте 19825
+17:44:20 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:56674
+17:44:20 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56674
+17:44:40 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56674
+17:44:40 INFO | Execute >> login
+17:44:40 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56674
+17:44:47 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56674
+17:44:47 INFO | Execute >> show
+17:44:47 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:56674
+17:44:47 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56674
+17:44:47 INFO | Execute >> info
+17:44:47 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:56674
+17:44:47 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56674
+17:44:47 INFO | Execute >> add
+17:44:47 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:56674
+18:10:34 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+18:10:34 INFO | Main >> Загружено 4 элементов в коллекцию
+18:10:34 INFO | Main >> Сервер запущен на порте 19825
+18:10:35 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:56910
+18:10:35 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56910
+18:10:53 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56910
+18:10:53 INFO | Execute >> register
+18:10:53 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56910
+18:11:36 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56910
+18:11:36 INFO | Execute >> show
+18:11:36 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:56910
+18:12:36 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56910
+18:12:36 INFO | Execute >> update
+18:12:36 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:56910
+18:13:06 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56910
+18:13:06 INFO | Execute >> update
+18:13:06 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:56910
+18:13:56 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+18:13:57 INFO | Main >> Загружено 4 элементов в коллекцию
+18:13:57 INFO | Main >> Сервер запущен на порте 19825
+18:14:06 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:56929
+18:14:06 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56929
+18:14:13 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56929
+18:14:13 INFO | Execute >> login
+18:14:13 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56929
+18:14:27 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56929
+18:14:27 INFO | Execute >> update
+18:14:27 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:56929
+18:15:07 INFO | Main >> Коллекция сохранена
+18:15:07 INFO | Main >> Сервер остановлен
+18:55:12 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+18:55:12 INFO | Main >> Загружено 0 элементов в коллекцию
+18:55:12 INFO | Main >> Сервер запущен на порте 19825
+18:55:26 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57169
+18:55:26 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57169
+18:55:37 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:55:37 INFO | Execute >> login
+18:55:37 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57169
+18:55:54 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:55:54 INFO | Execute >> show
+18:55:54 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:55:54 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:55:54 INFO | Execute >> info
+18:55:54 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:55:54 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:55:54 INFO | Execute >> add
+18:55:54 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:56:01 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:01 INFO | Execute >> logout
+18:56:01 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57169
+18:56:11 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:11 INFO | Execute >> login
+18:56:11 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57169
+18:56:12 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:12 INFO | Execute >> show
+18:56:12 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:56:12 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:12 INFO | Execute >> info
+18:56:12 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:56:12 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:12 INFO | Execute >> add
+18:56:12 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:56:16 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:16 INFO | Execute >> show
+18:56:16 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:56:35 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:35 INFO | Execute >> clear
+18:56:35 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:56:38 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:38 INFO | Execute >> show
+18:56:38 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:56:54 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:54 INFO | Execute >> remove_by_id
+18:56:54 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:57169
+18:56:57 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:57 INFO | Execute >> show
+18:56:57 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:56:57 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:58 INFO | Execute >> info
+18:56:58 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:56:58 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:58 INFO | Execute >> add
+18:56:58 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:56:59 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:56:59 INFO | Execute >> show
+18:56:59 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:57:11 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:57:11 INFO | Execute >> remove_by_id
+18:57:11 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:57:20 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:57:20 INFO | Execute >> logout
+18:57:20 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57169
+18:57:51 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:57:51 INFO | Execute >> login
+18:57:51 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57169
+18:57:53 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:57:53 INFO | Execute >> clear
+18:57:53 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:57:56 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:57:56 INFO | Execute >> clear
+18:57:56 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:58:00 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57169
+18:58:00 INFO | Execute >> show
+18:58:00 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57169
+18:58:04 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57169
+18:58:10 INFO | Main >> Сервер остановлен
+18:58:14 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+18:58:14 INFO | Main >> Загружено 0 элементов в коллекцию
+18:58:14 INFO | Main >> Сервер запущен на порте 19825
+18:58:42 INFO | Main >> Сервер остановлен
+18:59:19 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+18:59:20 INFO | Main >> Загружено 0 элементов в коллекцию
+18:59:20 INFO | Main >> Сервер запущен на порте 19825
+18:59:27 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57207
+18:59:27 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57207
+18:59:32 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57207
+18:59:32 INFO | Execute >> login
+18:59:32 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57207
+18:59:37 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57207
+18:59:39 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57211
+18:59:39 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57211
+18:59:42 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57211
+18:59:42 INFO | Execute >> login
+18:59:42 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57211
+18:59:42 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57211
+18:59:42 INFO | Execute >> show
+18:59:42 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57211
+18:59:42 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57211
+18:59:43 INFO | Execute >> info
+18:59:43 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57211
+18:59:43 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57211
+18:59:43 INFO | Execute >> add
+18:59:43 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57211
+19:00:10 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57211
+19:00:10 INFO | Execute >> clear
+19:00:10 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57211

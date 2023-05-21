@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS Tickets (
     price bigint not null check ( price > 0 ),
     comment text,
     type text not null,
-    event bigint not null references Events,
+    event bigint not null references Events on delete cascade,
     owner varchar references Users
 );
 """;
@@ -75,7 +75,10 @@ INSERT INTO tickets (name, x, y, creationdate, price, comment, type, event, owne
     public static final String hasTicket = "SELECT exists(SELECT 1 FROM tickets WHERE id = ?);";
     public static final String hasLogin = "SELECT exists(SELECT 1 FROM users WHERE login = ?);";
 
+    public static final String removeTicket = "DELETE FROM events WHERE id = (SELECT event FROM tickets WHERE id = ? LIMIT 1);";
+
     public static final String addUser = "INSERT INTO users (login, passwordhash) VALUES (?, ?);";
+    public static final String getOwner = "SELECT owner FROM tickets WHERE id = ? LIMIT 1";
     public static final String getPassHash = "SELECT passwordhash FROM users WHERE login = ? LIMIT 1;";
 
     public static final String getOldestTicketCreationTime  = "SELECT min(creationdate) FROM tickets;";

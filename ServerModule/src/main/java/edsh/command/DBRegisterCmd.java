@@ -21,7 +21,7 @@ public class DBRegisterCmd extends AbstractCommand implements ClientAvailable, A
         if(args[0].length() > 16) return "!Логин должен быть не более 16 символов!";
         if(!commandHelper.registerUser(getExecutor(), args[0], args[1]))
             return "!Пользователь с данным логином уже зарегестрирован!";
-        return "Добро пожаловать, " + args[0] + "!";
+        return "Регестрация успешна. Добро пожаловать, " + args[0] + "!";
     }
 
     @Override

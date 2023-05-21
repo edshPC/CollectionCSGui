@@ -89,7 +89,7 @@ public class DatabaseHelper {
 
     public boolean updateTicket(Ticket t) {
         try {
-            if(!containsTicket(t)) return false;
+            if(!containsTicket(t.getId())) return false;
             Event ev = t.getEvent();
             PreparedStatement st = connection.prepareStatement(SQLRequests.updateEvent);
             st.setLong(1, ev.getId());
@@ -107,9 +107,36 @@ public class DatabaseHelper {
         return false;
     }
 
-    public boolean containsTicket(Ticket t) throws SQLException {
+    public boolean removeTicket(long id) {
+        try {
+            PreparedStatement st = connection.prepareStatement(SQLRequests.removeTicket);
+            st.setLong(1, id);
+            return st.executeUpdate() > 0;
+        } catch (SQLException e) {
+            printer.errPrintln("Ошибка в выполнении SQL-запроса: " + e.getMessage());
+        }
+        return false;
+    }
+
+    public boolean checkOwner(long id, String login) {
+        try {
+            if(!containsTicket(id)) return false;
+            PreparedStatement st = connection.prepareStatement(SQLRequests.getOwner);
+            st.setLong(1, id);
+            ResultSet set = st.executeQuery();
+            set.next();
+            String owner = set.getString(1);
+            if(owner == null) return true;
+            return owner.equals(login);
+        } catch (SQLException e) {
+            printer.errPrintln("Ошибка в выполнении SQL-запроса: " + e.getMessage());
+        }
+        return false;
+    }
+
+    public boolean containsTicket(long id) throws SQLException {
         PreparedStatement st = connection.prepareStatement(SQLRequests.hasTicket);
-        st.setLong(1, t.getId());
+        st.setLong(1, id);
         ResultSet set = st.executeQuery();
         set.next();
         return set.getBoolean(1);
