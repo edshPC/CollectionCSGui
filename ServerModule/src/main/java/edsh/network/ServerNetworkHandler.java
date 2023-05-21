@@ -45,7 +45,6 @@ public class ServerNetworkHandler {
         for(Iterator<SelectionKey> it = selector.selectedKeys().iterator(); it.hasNext();) {
             SelectionKey key = it.next();
             it.remove();
-
             if(key.isAcceptable())
                 handleConnection();
             else if(key.isReadable()) {
@@ -129,6 +128,7 @@ public class ServerNetworkHandler {
 
     private void disconnectClient(SelectionKey key) {
         SocketChannel client = (SocketChannel) key.channel();
+        requestHandler.handleDisconnect(key);
         key.cancel();
         try {
             printer.println("Отключен клиент " + client.getRemoteAddress().toString());

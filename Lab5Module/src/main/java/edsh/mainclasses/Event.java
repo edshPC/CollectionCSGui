@@ -1,21 +1,20 @@
 package edsh.mainclasses;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.NoSuchElementException;
 
-import edsh.helpers.ConsolePrinter;
-import edsh.helpers.Printer;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
+import lombok.*;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import edsh.enums.EventType;
 import edsh.exeptions.WrongFieldException;
-import edsh.helpers.MyScanner;
 
+@Builder
+@Getter
 @EqualsAndHashCode
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Event implements Comparable<Event>, Serializable {
+	@Setter
 	@EqualsAndHashCode.Exclude
     private Long id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private final String name; //Поле не может быть null, Строка не может быть пустой
@@ -52,7 +51,7 @@ public class Event implements Comparable<Event>, Serializable {
 		} catch (JSONException e) {
 			throw new WrongFieldException("Ошибка в получении поля");
 		}
-		lastId = Math.max(lastId, this.id);
+		updateLastId();
     }
     
     /**
@@ -69,16 +68,18 @@ public class Event implements Comparable<Event>, Serializable {
 	public void updateId() {
 		id = ++lastId;
 	}
+	public void updateLastId() {
+		lastId = Math.max(lastId, this.id);
+	}
     
     @Override
     public String toString() {
-    	String out = "Событие #" + id + ":\n" +
-    			"   - Имя: " + name + "\n" +
-    			"   - Дата проведения: " + date + "\n" +
-    			"   - Минимальный возраст: " + minAge + "\n" +
-    			"   - Количество билетов: " + ticketsCount + "\n" +
-    			"   - Тип: " + eventType;
-    	return out;
+		return "Событие #" + id + ":\n" +
+				"   - Имя: " + name + "\n" +
+				"   - Дата проведения: " + date + "\n" +
+				"   - Минимальный возраст: " + minAge + "\n" +
+				"   - Количество билетов: " + ticketsCount + "\n" +
+				"   - Тип: " + eventType;
     }
     
     @Override

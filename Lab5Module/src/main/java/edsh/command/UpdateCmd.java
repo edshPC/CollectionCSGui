@@ -25,14 +25,9 @@ public class UpdateCmd extends AbstractCommand implements ClientAvailable, Requi
 		if(index < 0)
 			return "!Не найден билет с данным id. Используйте add чтобы добавить новый";
 
-		if(attachment == null)
-			try {
-				attachment = Ticket.getFactory().create(holder.getScanner());
-			} catch (WrongFieldException e) {
-				return "!Билет не обновлен";
-			}
-		Ticket.putWithId(index, id, attachment);
-		attachment = null;
+		Ticket t = getAttachment();
+		if(t == null) return "!Ошибка при создании билета";
+		Ticket.putWithId(index, id, t);
 
 		return "Билет успешно обновлен!";
 	}
@@ -45,5 +40,18 @@ public class UpdateCmd extends AbstractCommand implements ClientAvailable, Requi
 	@Override
 	public void setAttachment(Ticket ticket) {
 		attachment = ticket;
+	}
+
+	@Override
+	public Ticket getAttachment() {
+		if(attachment == null)
+			try {
+				return Ticket.getFactory().create(holder.getScanner());
+			} catch (WrongFieldException e) {
+				return null;
+			}
+		Ticket temp = attachment;
+		attachment = null;
+		return temp;
 	}
 }

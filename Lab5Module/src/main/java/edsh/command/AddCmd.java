@@ -14,16 +14,9 @@ public class AddCmd extends AbstractCommand implements ClientAvailable, RequireA
 	
 	@Override
 	public String execute(String[] args) {
-
-		if(attachment == null)
-			try {
-				attachment = Ticket.getFactory().create(holder.getScanner());
-			} catch (WrongFieldException e) {
-				return "!Ошибка в создании билета: " + e.getMessage();
-			}
-
-		list.add(attachment);
-		attachment = null;
+		Ticket t = getAttachment();
+		if(t == null) return "!Ошибка при создании билета";
+		list.add(t);
 		return "Билет успешно добавлен!";
 	}
 
@@ -37,4 +30,19 @@ public class AddCmd extends AbstractCommand implements ClientAvailable, RequireA
 		attachment = ticket;
 		ticket.updateId();
 	}
+
+	@Override
+	public Ticket getAttachment() {
+		if(attachment == null)
+			try {
+				return Ticket.getFactory().create(holder.getScanner());
+			} catch (WrongFieldException e) {
+				return null;
+			}
+		Ticket temp = attachment;
+		attachment = null;
+		return temp;
+	}
+
+
 }

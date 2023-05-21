@@ -12,7 +12,6 @@ public class RunClient
     public static void main( String[] args ) {
         Printer printer = new ConsolePrinter();
         HashMap<Character, String> arguments = new ArgsHelper(args).parseKeyArguments();
-
         String address = arguments.get('a');
         int port = -1;
         if(arguments.containsKey('p')) {
@@ -24,7 +23,7 @@ public class RunClient
         }
         NetworkHandler handler = new NetworkHandler(address, port);
         ClientCommandHelper commandHelper = new ClientCommandHelper(handler);
-        commandHelper.registerAllClientCommands();
+        commandHelper.registerAllCommands();
 
         if(!handler.connect() || !commandHelper.registerAvailableCommands())
             printer.println("Программа работает в оффлайн-режиме");

@@ -17,13 +17,13 @@ import java.util.Collections;
 public class RequestCmd extends AbstractCommandBase implements RequestCommand {
     private final AttachedObject attachment;
     private final ArgType[] argChecks;
-    private final MyScanner sc;
+    private final CommandHelper.Holder holder;
 
     public RequestCmd(AvailableCommand availableCommand, CommandHelper.Holder h) {
         super(availableCommand.getName(), availableCommand.getDescription());
         this.attachment = availableCommand.getAttachment();
         this.argChecks = availableCommand.getArgs();
-        this.sc = h.getScanner();
+        this.holder = h;
     }
 
     @Override
@@ -62,7 +62,7 @@ public class RequestCmd extends AbstractCommandBase implements RequestCommand {
         }
 
         try {
-            requestBuilder.attachment(factory.create(sc));
+            requestBuilder.attachment(factory.create(holder.getScanner()));
         } catch (WrongFieldException e) {
             return null;
         }

@@ -31,12 +31,12 @@ public class ExecuteScriptCmd extends AbstractCommand {
 			sc.close();
 			return "!Обнаружена рекурсия. Провертье, не запускает ли скрипт сам себя";
 		}
-		MyScanner previous = commandHelper.getHolder().getScanner();
-		commandHelper.getHolder().setScanner(sc);
+		MyScanner previous = holder.getScanner();
+		holder.setScanner(sc);
 		invokes.add(path);
 		while (sc.hasNextLine() && commandHelper.executeNextCommand());
 		invokes.removeLast();
-		commandHelper.getHolder().setScanner(previous);
+		holder.setScanner(previous);
 		sc.close();
 		return "Скрипт завершен";
 	}

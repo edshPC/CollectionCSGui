@@ -42,6 +42,11 @@ public class ResponsePrinter implements Printer {
 
     public void sendTo(SelectionKey client) {
         if(client == null || response == null) return;
+        if(client.interestOps() == SelectionKey.OP_WRITE &&
+            client.attachment() instanceof Response resp) {
+            resp.setResponse(response.getResponse());
+            return;
+        }
         client.attach(response);
         client.interestOps(SelectionKey.OP_WRITE); //нужно отправить ответ
     }

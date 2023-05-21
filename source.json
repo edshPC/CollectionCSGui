@@ -38,5 +38,45 @@
             "id": 2,
             "eventType": "CONCERT"
         }
+    },
+    {
+        "price": 10,
+        "name": "name",
+        "coordinates": {
+            "x": 1,
+            "y": 2
+        },
+        "comment": "c",
+        "id": 3,
+        "creationDate": "2023-05-18T17:45:42.525621700+03:00[Europe/Moscow]",
+        "type": "BUDGETARY",
+        "event": {
+            "date": "2000-10-10",
+            "ticketsCount": 1,
+            "minAge": 12,
+            "name": "sss",
+            "id": 1,
+            "eventType": "CONCERT"
+        }
+    },
+    {
+        "price": 213,
+        "name": "script ticket",
+        "coordinates": {
+            "x": 10,
+            "y": 123
+        },
+        "comment": "comm",
+        "id": 4,
+        "creationDate": "2023-05-18T17:45:55.001692900+03:00[Europe/Moscow]",
+        "type": "CHEAP",
+        "event": {
+            "date": "2012-10-25",
+            "ticketsCount": 5,
+            "minAge": 12,
+            "name": "ev name",
+            "id": 2,
+            "eventType": "CONCERT"
+        }
     }
 ]

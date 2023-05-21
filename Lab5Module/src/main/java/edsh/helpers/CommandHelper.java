@@ -16,7 +16,7 @@ public class CommandHelper {
 	public static class Holder {
 		@Setter
 		private MyScanner scanner;
-		private final FileHelper fileHelper;
+		private final DataStorage dataStorage;
 		private final HashMap<String, Command> commands = new HashMap<>();
 	}
 
@@ -26,10 +26,10 @@ public class CommandHelper {
 	/**
 	 * Создает объект, работающий с командами из определенного потока в {@link Scanner}
 	 * @param sc Сканер
-	 * @param fh Файловый помошник с файлом коллекции
+	 * @param ds Помошник с файлом коллекции
 	 */
-	public CommandHelper(MyScanner sc, FileHelper fh) {
-		this.holder = new Holder(sc, fh);
+	public CommandHelper(MyScanner sc, DataStorage ds) {
+		this.holder = new Holder(sc, ds);
 	}
 
 	/**

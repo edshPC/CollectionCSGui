@@ -1,47 +1,171 @@
-12:21:10 INFO | FileHelper >> Файл 'source.json' загружен
-12:21:10 INFO | Main >> Загружено 2 элементов в коллекцию
-12:21:10 INFO | Main >> Сервер запущен на порте 19825
-12:21:17 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57294
-12:21:17 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57294
-12:22:31 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57294
-12:22:31 INFO | Execute >> filter_contains_comment
-12:22:31 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57294
-12:22:58 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57294
-12:22:58 INFO | Execute >> filter_contains_comment
-12:22:58 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57294
-12:24:08 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57294
-12:24:37 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57304
-12:24:37 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57304
-12:24:47 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57304
-12:25:01 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57306
-12:25:01 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57306
-12:25:06 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57309
-12:25:06 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57309
-12:25:07 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57313
-12:25:07 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57313
-12:25:08 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57317
-12:25:08 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57317
-12:25:09 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:57321
-12:25:09 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:57321
-12:25:16 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57306
-12:25:16 INFO | Execute >> show
-12:25:16 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57306
-12:25:18 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57309
-12:25:18 INFO | Execute >> show
-12:25:18 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57309
-12:25:21 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57313
-12:25:21 INFO | Execute >> show
-12:25:21 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57313
-12:25:24 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57317
-12:25:24 INFO | Execute >> info
-12:25:24 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57317
-12:25:26 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:57321
-12:25:26 INFO | Execute >> show
-12:25:26 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:57321
-12:25:37 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57306
-12:25:38 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57309
-12:25:40 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57313
-12:25:42 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57317
-12:25:43 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:57321
-12:25:45 INFO | Main >> Коллекция сохранена
-12:25:45 INFO | Main >> Сервер остановлен
+11:23:11 ERROR| DatabaseHelper >> Не удалось подключиться к БД: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+11:23:11 ERROR| Main >> Некуда сохранять коллекцию! Проверьте соединение с БД или используйте -f {filename} в аргументах для работы с файлом
+11:24:31 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+11:24:31 INFO | Main >> Загружено 2 элементов в коллекцию
+11:24:31 INFO | Main >> Сервер запущен на порте 19825
+11:25:09 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:53871
+11:25:09 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:53871
+11:25:29 INFO | Main >> Коллекция сохранена
+11:25:29 INFO | Main >> Сервер остановлен
+14:12:26 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+14:12:26 INFO | Main >> Загружено 2 элементов в коллекцию
+14:12:26 INFO | Main >> Сервер запущен на порте 19825
+14:12:40 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:54287
+14:12:40 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:54287
+14:12:56 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:54287
+14:12:56 INFO | Execute >> login
+14:12:56 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:54287
+14:13:13 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:54287
+14:13:13 INFO | Execute >> logout
+14:13:13 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:54287
+14:13:18 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:54287
+14:13:25 INFO | Main >> Коллекция сохранена
+14:13:25 INFO | Main >> Сервер остановлен
+14:49:12 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+14:49:12 INFO | Main >> Загружено 2 элементов в коллекцию
+14:49:12 INFO | Main >> Сервер запущен на порте 19825
+14:49:20 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+14:49:20 INFO | Main >> Загружено 2 элементов в коллекцию
+14:49:20 INFO | Main >> Сервер запущен на порте 19825
+14:49:23 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:55229
+14:49:23 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:55229
+14:49:32 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55229
+14:49:32 INFO | Execute >> register
+14:49:32 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:55229
+14:49:39 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55229
+14:49:39 INFO | Execute >> register
+14:49:39 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:55229
+14:49:52 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55229
+14:49:52 INFO | Execute >> logout
+14:49:52 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:55229
+14:49:59 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55229
+14:49:59 INFO | Execute >> register
+14:49:59 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:55229
+14:50:04 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55229
+14:50:04 INFO | Execute >> logout
+14:50:04 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:55229
+14:52:43 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:55249
+14:52:43 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:55249
+15:00:28 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+15:00:28 INFO | Main >> Загружено 2 элементов в коллекцию
+15:00:28 INFO | Main >> Сервер запущен на порте 19825
+15:00:30 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:55295
+15:00:30 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:55295
+15:00:36 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55295
+15:00:36 INFO | Execute >> login
+15:00:36 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:55295
+15:00:40 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55295
+15:00:40 INFO | Execute >> login
+15:00:40 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:55295
+15:00:48 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55295
+15:00:48 INFO | Execute >> logout
+15:00:48 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:55295
+15:00:53 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55295
+15:00:53 INFO | Execute >> register
+15:00:53 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:55295
+15:14:34 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+15:14:34 INFO | Main >> Загружено 2 элементов в коллекцию
+15:14:34 INFO | Main >> Сервер запущен на порте 19825
+15:14:38 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:55364
+15:14:38 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:55364
+15:15:41 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55364
+15:15:41 ERROR| DatabaseHelper >> Ошибка в выполнении SQL-запроса: ERROR: duplicate key value violates unique constraint "events_pkey"
+  Подробности: Key (id)=(1) already exists.
+15:15:41 INFO | Execute >> add
+15:15:41 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:55364
+15:19:17 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+15:19:17 INFO | Main >> Загружено 2 элементов в коллекцию
+15:19:17 INFO | Main >> Сервер запущен на порте 19825
+15:19:24 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:55385
+15:19:24 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:55385
+15:19:39 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55385
+15:19:39 ERROR| DatabaseHelper >> Ошибка в выполнении SQL-запроса: ERROR: duplicate key value violates unique constraint "tickets_pkey"
+  Подробности: Key (id)=(1) already exists.
+15:19:39 INFO | Execute >> add
+15:19:39 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:55385
+15:32:22 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55385
+15:32:22 INFO | Execute >> show
+15:32:22 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:55385
+15:32:22 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55385
+15:32:22 INFO | Execute >> info
+15:32:22 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:55385
+15:32:22 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55385
+15:32:22 ERROR| DatabaseHelper >> Ошибка в выполнении SQL-запроса: ERROR: duplicate key value violates unique constraint "tickets_pkey"
+  Подробности: Key (id)=(2) already exists.
+15:32:22 INFO | Execute >> add
+15:32:22 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:55385
+15:33:02 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55385
+15:33:02 INFO | Execute >> show
+15:33:02 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:55385
+15:33:02 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55385
+15:33:02 INFO | Execute >> info
+15:33:02 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:55385
+15:33:02 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:55385
+15:33:02 INFO | Execute >> add
+15:33:02 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:55385
+16:57:35 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+16:57:35 INFO | Main >> Загружено 3 элементов в коллекцию
+16:57:35 INFO | Main >> Сервер запущен на порте 19825
+16:57:36 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:56406
+16:57:36 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56406
+17:01:00 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+17:01:00 INFO | Main >> Загружено 3 элементов в коллекцию
+17:01:00 INFO | Main >> Сервер запущен на порте 19825
+17:01:02 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:56423
+17:01:02 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56423
+17:20:57 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+17:20:57 INFO | Main >> Загружено 3 элементов в коллекцию
+17:20:57 INFO | Main >> Сервер запущен на порте 19825
+17:21:00 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:56494
+17:21:00 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56494
+17:21:11 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56494
+17:21:11 INFO | Execute >> login
+17:21:11 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:56494
+17:23:12 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+17:23:12 INFO | Main >> Загружено 3 элементов в коллекцию
+17:23:12 INFO | Main >> Сервер запущен на порте 19825
+17:23:16 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:56511
+17:23:16 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56511
+17:23:23 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56511
+17:23:23 INFO | Execute >> login
+17:23:23 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:56511
+17:24:03 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56511
+17:24:03 INFO | Execute >> login
+17:24:03 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:56511
+17:24:13 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56511
+17:24:13 INFO | Execute >> register
+17:24:13 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:56511
+17:24:53 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+17:24:53 INFO | Main >> Загружено 3 элементов в коллекцию
+17:24:53 INFO | Main >> Сервер запущен на порте 19825
+17:24:56 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:56519
+17:24:56 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56519
+17:25:03 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56519
+17:25:03 INFO | Execute >> login
+17:25:03 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:56519
+17:26:26 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56519
+17:26:26 INFO | Execute >> login
+17:26:26 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:56519
+17:28:11 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+17:28:11 INFO | Main >> Загружено 3 элементов в коллекцию
+17:28:11 INFO | Main >> Сервер запущен на порте 19825
+17:28:14 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:56536
+17:28:14 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56536
+17:28:22 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56536
+17:28:22 INFO | Execute >> login
+17:28:22 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:56536
+17:35:33 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+17:35:33 INFO | Main >> Загружено 3 элементов в коллекцию
+17:35:33 INFO | Main >> Сервер запущен на порте 19825
+17:35:37 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:56585
+17:35:37 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56585
+17:36:31 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56585
+17:36:31 INFO | Execute >> login
+17:36:31 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56585
+17:36:50 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56585
+17:36:50 INFO | Execute >> logout
+17:36:50 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56585
+17:36:57 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:56585
+17:36:57 INFO | Execute >> login
+17:36:57 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:56585
+17:37:09 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:56585

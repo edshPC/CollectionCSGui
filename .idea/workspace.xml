@@ -4,11 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Last fixes">
-      <change afterPath="$PROJECT_DIR$/logs/26-04-2023.log" afterDir="false" />
+    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Diagram added">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/DataStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/FileStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/AuthoritativeCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBAddCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBLoginCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBLogoutCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBRegisterCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DBServerCommandHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DatabaseHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DatabaseStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/SQLRequests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/08-05-2023.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/14-05-2023.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/18-05-2023.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/19-05-2023.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/20-05-2023.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/RequestCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/command/RequestCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/helpers/ClientCommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/helpers/ClientCommandHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AddCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AddCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExecuteScriptCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/ExecuteScriptCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/InfoCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/InfoCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveAllByEventCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RemoveAllByEventCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RequireAttachment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/RequireAttachment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SaveCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/SaveCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ArgsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ArgsHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/CommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/CommandHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ListHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ListHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/network/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/RunServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/RunServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ResponsePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ResponsePrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ServerCommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ServerCommandHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/RequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/ServerNetworkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/ServerNetworkHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/script.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source.json" beforeDir="false" afterPath="$PROJECT_DIR$/source.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,25 +90,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/edshh/IDEA/CollectionsClientServer/Lab5Module/pom.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/edshh/IDEA/CollectionsClientServer/Lab5Module/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\edshh\IDEA\CollectionsClientServer\src\main\java\edsh" />
@@ -178,7 +228,16 @@
       <workItem from="1683484827900" duration="201000" />
       <workItem from="1683537017167" duration="937000" />
       <workItem from="1683644534384" duration="465000" />
-      <workItem from="1683645017685" duration="124000" />
+      <workItem from="1683645017685" duration="369000" />
+      <workItem from="1683707522655" duration="1218000" />
+      <workItem from="1683968197415" duration="15000" />
+      <workItem from="1684054317830" duration="9946000" />
+      <workItem from="1684074146162" duration="8244000" />
+      <workItem from="1684420551687" duration="39000" />
+      <workItem from="1684420725771" duration="4804000" />
+      <workItem from="1684508446375" duration="15438000" />
+      <workItem from="1684590897488" duration="10540000" />
+      <workItem from="1684656686243" duration="19069000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1680622399634</created>
@@ -229,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683484913030</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Diagram added">
+      <created>1683645336484</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683645336484</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +310,8 @@
     <MESSAGE value="add Attached request object" />
     <MESSAGE value="Bug fixes" />
     <MESSAGE value="Last fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Last fixes" />
+    <MESSAGE value="Diagram added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Diagram added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

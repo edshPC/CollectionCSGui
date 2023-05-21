@@ -3,10 +3,7 @@ package edsh.command;
 import edsh.exeptions.WrongFieldException;
 import edsh.helpers.CommandHelper;
 import edsh.mainclasses.Event;
-import edsh.mainclasses.Ticket;
 import edsh.network.AvailableCommand;
-
-import java.util.Iterator;
 
 public class RemoveAllByEventCmd extends AbstractCommand implements ClientAvailable, RequireAttachment<Event> {
 	private Event attachment = null;
@@ -18,17 +15,12 @@ public class RemoveAllByEventCmd extends AbstractCommand implements ClientAvaila
 	@Override
 	public String execute(String[] args) {
 
-		if(attachment == null)
-			try {
-				attachment = Event.getFactory().create(holder.getScanner());
-			} catch (WrongFieldException e) {
-				return "!Ошибка в создании события: " + e.getMessage();
-			}
+		Event ev = getAttachment();
+		if(ev == null) return "!Ошибка в создании события";
 
 		int sizeBefore = list.size();
-		list.removeIf(check -> check.getEvent().equals(attachment));
+		list.removeIf(check -> check.getEvent().equals(ev));
 
-		attachment = null;
 		int count = sizeBefore - list.size();
 		if(count == 0)
 			return "!Не найдено билетов с таким событием";
@@ -44,5 +36,18 @@ public class RemoveAllByEventCmd extends AbstractCommand implements ClientAvaila
 	@Override
 	public void setAttachment(Event event) {
 		attachment = event;
+	}
+
+	@Override
+	public Event getAttachment() {
+		if(attachment == null)
+			try {
+				return Event.getFactory().create(holder.getScanner());
+			} catch (WrongFieldException e) {
+				return null;
+			}
+		Event temp = attachment;
+		attachment = null;
+		return temp;
 	}
 }

@@ -1,5 +1,6 @@
 package edsh.mainclasses;
 
+import lombok.Getter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -7,6 +8,7 @@ import edsh.exeptions.WrongFieldException;
 
 import java.io.Serializable;
 
+@Getter
 public class Coordinates implements Serializable {
     private final float x; //Максимальное значение поля: 542
     private final Integer y; //Максимальное значение поля: 203, Поле не может быть null

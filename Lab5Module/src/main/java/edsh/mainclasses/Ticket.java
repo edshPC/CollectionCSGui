@@ -3,7 +3,7 @@ import java.io.Serializable;
 import java.time.ZonedDateTime;
 
 import edsh.helpers.ListHelper;
-import lombok.Getter;
+import lombok.*;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -11,7 +11,10 @@ import edsh.enums.TicketType;
 import edsh.exeptions.WrongFieldException;
 
 @Getter
+@Builder
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Ticket implements Comparable<Ticket>, Serializable {
+	@Setter
     private long id; //Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private final String name; //Поле не может быть null, Строка не может быть пустой
     private final Coordinates coordinates; //Поле не может быть null
@@ -55,7 +58,7 @@ public class Ticket implements Comparable<Ticket>, Serializable {
 		} catch (JSONException e) {
 			throw new WrongFieldException("Ошибка в получении поля");
 		}
-    	lastId = Math.max(lastId, this.id);
+    	updateLastId();
     }
     
     /**
@@ -72,19 +75,21 @@ public class Ticket implements Comparable<Ticket>, Serializable {
 	public void updateId() {
 		id = ++lastId;
 	}
+	public void updateLastId() {
+		lastId = Math.max(lastId, this.id);
+	}
     
     @Override
     public String toString() {
-    	String out = "Информация о билете #" + id + ":\n" +
-    			" - Имя: " + name + "\n" +
-    			" - Координаты: " + coordinates + "\n" +
-    			" - Дата создания: " + creationDate + "\n" +
-    			" - Цена: " + price + "\n" +
-    			" - Комментарий: " + comment + "\n" +
-    			" - Тип: " + type + "\n" +
-    			" - Событие: " + event;
-    	
-    	return out;
+
+		return "Информация о билете #" + id + ":\n" +
+			   " - Имя: " + name + "\n" +
+			   " - Координаты: " + coordinates + "\n" +
+			   " - Дата создания: " + creationDate + "\n" +
+			   " - Цена: " + price + "\n" +
+			   " - Комментарий: " + comment + "\n" +
+			   " - Тип: " + type + "\n" +
+			   " - Событие: " + event;
     }
     
     @Override
@@ -110,7 +115,7 @@ public class Ticket implements Comparable<Ticket>, Serializable {
     public static void putWithId(int index, long id, Ticket t) {
 		t.id = id;
 		ListHelper.getList().set(index, t);
-		lastId = Math.max(lastId, id);
+		t.updateLastId();
 	}
 
     

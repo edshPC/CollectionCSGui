@@ -1,17 +1,17 @@
 package edsh.helpers;
 
-import edsh.command.ClientAvailable;
-import edsh.command.Command;
-import edsh.command.RequireAttachment;
+import edsh.command.*;
 import edsh.network.AvailableCommandsPacket;
 import edsh.network.Request;
+
+import java.nio.channels.SelectionKey;
 
 public class ServerCommandHelper extends CommandHelper {
 
     private final Printer logger = new LoggerPrinter("Execute");
 
-    public ServerCommandHelper(MyScanner sc, FileHelper fh) {
-        super(sc, fh);
+    public ServerCommandHelper(MyScanner sc, DataStorage ds) {
+        super(sc, ds);
     }
 
     public void executeRequest(Request request, Printer printer) {
@@ -30,7 +30,7 @@ public class ServerCommandHelper extends CommandHelper {
      * добавляет ее в пакет
      * @return Пакет с доступными клиенту командами
      */
-    public AvailableCommandsPacket getAvailableCommands() {
+    public AvailableCommandsPacket getAvailableCommandsFor(SelectionKey key) {
         AvailableCommandsPacket pkt = new AvailableCommandsPacket();
         for(Command command : getHolder().getCommands().values()) {
             if(command instanceof ClientAvailable availableCommand) {
@@ -39,5 +39,14 @@ public class ServerCommandHelper extends CommandHelper {
         }
         return pkt;
     }
+
+    public void sendAvailableCommandsTo(SelectionKey key) {
+        ResponsePrinter responsePrinter = new ResponsePrinter();
+        responsePrinter.setClient(key);
+
+        AvailableCommandsPacket availableCommands = getAvailableCommandsFor(key);
+        responsePrinter.sendAvailableCommands(availableCommands);
+    }
+    public void onDisconnect(SelectionKey key) {}
 
 }

@@ -15,7 +15,8 @@ public class Main {
 			printer.println("Вы не ввели название файла в аргументах. Попытка загрузки из файла по умолчанию: 'source.json'");
 
 		FileHelper fileHelper = new FileHelper(filename, printer);
-		int loaded = ListHelper.load(fileHelper);
+		DataStorage dataStorage = new FileStorage(fileHelper);
+		int loaded = ListHelper.load(dataStorage);
 
 		if(loaded >= 0) {
 			printer.println("Загружено " + loaded + " элементов в коллекцию");
@@ -23,10 +24,12 @@ public class Main {
 
 
 		MyScanner sc = new MyScanner(new Scanner(System.in), true);
-		CommandHelper commandHelper = new CommandHelper(sc, fileHelper);
+		CommandHelper commandHelper = new CommandHelper(sc, dataStorage);
 		commandHelper.registerAllCommands();
 
-		while(commandHelper.executeNextCommand());
+		do {
+			printer.print("> ");
+		} while(commandHelper.executeNextCommand());
 		printer.println("Программа завершена");
 
 	}

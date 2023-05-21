@@ -2,6 +2,7 @@ package edsh.network;
 
 import edsh.helpers.Printer;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -15,6 +16,7 @@ public class Response implements Serializable {
     }
 
     private final Status status;
+    @Setter
     private String response;
     private AvailableCommandsPacket availableCommands;
 
@@ -32,6 +34,9 @@ public class Response implements Serializable {
         switch (status) {
             case OK -> printer.print(response);
             case ERROR -> printer.errPrint(response);
+            case AVAILABLE_COMMANDS -> {
+                if (response != null) printer.print(response);
+            }
         }
     }
 

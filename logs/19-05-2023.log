@@ -1,0 +1,112 @@
+19:12:52 ERROR| DatabaseHelper >> Не удалось подключиться к БД: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+19:12:52 ERROR| Main >> Некуда сохранять коллекцию! Проверьте соединение с БД или используйте -f {filename} в аргументах для работы с файлом
+19:19:40 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+19:19:41 INFO | DatabaseHelper >> Таблицы БД в актуальном состоянии
+19:19:41 INFO | Main >> Сервер запущен на порте 19825
+19:20:00 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+19:20:00 INFO | DatabaseHelper >> Таблицы БД в актуальном состоянии
+19:20:00 INFO | Main >> Сервер запущен на порте 19825
+19:20:34 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+19:20:34 INFO | Main >> Сервер запущен на порте 19825
+19:20:45 ERROR| DatabaseHelper >> Не удалось подключиться к БД: FATAL: database "studss" does not exist
+19:20:45 ERROR| Main >> Некуда сохранять коллекцию! Проверьте соединение с БД или используйте -f {filename} в аргументах для работы с файлом
+19:20:55 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+19:20:55 INFO | Main >> Сервер запущен на порте 19825
+19:23:51 INFO | Main >> Сервер остановлен
+21:10:28 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:10:28 INFO | Main >> Загружено 0 элементов в коллекцию
+21:10:28 INFO | Main >> Сервер запущен на порте 19825
+21:15:44 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:15:44 ERROR| DatabaseStorage >> Ошибка в загрузке из базы данных: Колонки tickets.id не найдено в этом ResultSet’’е.
+21:15:44 INFO | Main >> Сервер запущен на порте 19825
+21:21:27 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:21:27 INFO | DatabaseStorage >> org.postgresql.jdbc.PgResultSet@1033576a
+21:21:27 ERROR| DatabaseStorage >> Ошибка в загрузке из базы данных: Колонки tickets.id не найдено в этом ResultSet’’е.
+21:21:27 INFO | Main >> Сервер запущен на порте 19825
+21:24:55 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:24:55 INFO | DatabaseStorage >> id id bigserial java.lang.Long
+21:24:55 INFO | DatabaseStorage >> name name text java.lang.String
+21:24:55 INFO | DatabaseStorage >> x x float4 java.lang.Float
+21:24:55 INFO | DatabaseStorage >> y y int4 java.lang.Integer
+21:24:55 INFO | DatabaseStorage >> creationdate creationdate timestamptz java.sql.Timestamp
+21:24:55 INFO | DatabaseStorage >> price price int8 java.lang.Long
+21:24:55 INFO | DatabaseStorage >> comment comment text java.lang.String
+21:24:55 INFO | DatabaseStorage >> type type text java.lang.String
+21:24:55 INFO | DatabaseStorage >> event event int8 java.lang.Long
+21:24:55 INFO | DatabaseStorage >> owner owner varchar java.lang.String
+21:24:55 INFO | DatabaseStorage >> id id bigserial java.lang.Long
+21:24:55 INFO | DatabaseStorage >> name name text java.lang.String
+21:24:55 INFO | DatabaseStorage >> date date date java.sql.Date
+21:24:55 INFO | DatabaseStorage >> minage minage int8 java.lang.Long
+21:24:55 INFO | DatabaseStorage >> ticketscount ticketscount int8 java.lang.Long
+21:24:55 INFO | DatabaseStorage >> eventtype eventtype text java.lang.String
+21:24:55 ERROR| DatabaseStorage >> Ошибка в загрузке из базы данных: Колонки tickets.id не найдено в этом ResultSet’’е.
+21:24:55 INFO | Main >> Сервер запущен на порте 19825
+21:26:25 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:26:25 INFO | DatabaseStorage >> 1. id id bigserial java.lang.Long
+21:26:25 INFO | DatabaseStorage >> 2. name name text java.lang.String
+21:26:25 INFO | DatabaseStorage >> 3. x x float4 java.lang.Float
+21:26:25 INFO | DatabaseStorage >> 4. y y int4 java.lang.Integer
+21:26:25 INFO | DatabaseStorage >> 5. creationdate creationdate timestamptz java.sql.Timestamp
+21:26:25 INFO | DatabaseStorage >> 6. price price int8 java.lang.Long
+21:26:25 INFO | DatabaseStorage >> 7. comment comment text java.lang.String
+21:26:25 INFO | DatabaseStorage >> 8. type type text java.lang.String
+21:26:25 INFO | DatabaseStorage >> 9. event event int8 java.lang.Long
+21:26:25 INFO | DatabaseStorage >> 10. owner owner varchar java.lang.String
+21:26:25 INFO | DatabaseStorage >> 11. id id bigserial java.lang.Long
+21:26:25 INFO | DatabaseStorage >> 12. name name text java.lang.String
+21:26:25 INFO | DatabaseStorage >> 13. date date date java.sql.Date
+21:26:25 INFO | DatabaseStorage >> 14. minage minage int8 java.lang.Long
+21:26:25 INFO | DatabaseStorage >> 15. ticketscount ticketscount int8 java.lang.Long
+21:26:25 INFO | DatabaseStorage >> 16. eventtype eventtype text java.lang.String
+21:26:25 ERROR| DatabaseStorage >> Ошибка в загрузке из базы данных: Колонки tickets.id не найдено в этом ResultSet’’е.
+21:26:25 INFO | Main >> Сервер запущен на порте 19825
+21:27:54 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:27:55 INFO | DatabaseStorage >> 1. id id bigserial java.lang.Long
+21:27:55 INFO | DatabaseStorage >> 2. name name text java.lang.String
+21:27:55 INFO | DatabaseStorage >> 3. x x float4 java.lang.Float
+21:27:55 INFO | DatabaseStorage >> 4. y y int4 java.lang.Integer
+21:27:55 INFO | DatabaseStorage >> 5. creationdate creationdate timestamptz java.sql.Timestamp
+21:27:55 INFO | DatabaseStorage >> 6. price price int8 java.lang.Long
+21:27:55 INFO | DatabaseStorage >> 7. comment comment text java.lang.String
+21:27:55 INFO | DatabaseStorage >> 8. type type text java.lang.String
+21:27:55 INFO | DatabaseStorage >> 9. event event int8 java.lang.Long
+21:27:55 INFO | DatabaseStorage >> 10. owner owner varchar java.lang.String
+21:27:55 INFO | DatabaseStorage >> 11. id id bigserial java.lang.Long
+21:27:55 INFO | DatabaseStorage >> 12. name name text java.lang.String
+21:27:55 INFO | DatabaseStorage >> 13. date date date java.sql.Date
+21:27:55 INFO | DatabaseStorage >> 14. minage minage int8 java.lang.Long
+21:27:55 INFO | DatabaseStorage >> 15. ticketscount ticketscount int8 java.lang.Long
+21:27:55 INFO | DatabaseStorage >> 16. eventtype eventtype text java.lang.String
+21:27:55 ERROR| DatabaseStorage >> Ошибка в загрузке из базы данных: Колонки 12 не найдено в этом ResultSet’’е.
+21:27:55 INFO | Main >> Сервер запущен на порте 19825
+21:28:07 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:28:07 INFO | DatabaseStorage >> 1. id id bigserial java.lang.Long
+21:28:07 INFO | DatabaseStorage >> 2. name name text java.lang.String
+21:28:07 INFO | DatabaseStorage >> 3. x x float4 java.lang.Float
+21:28:07 INFO | DatabaseStorage >> 4. y y int4 java.lang.Integer
+21:28:07 INFO | DatabaseStorage >> 5. creationdate creationdate timestamptz java.sql.Timestamp
+21:28:07 INFO | DatabaseStorage >> 6. price price int8 java.lang.Long
+21:28:07 INFO | DatabaseStorage >> 7. comment comment text java.lang.String
+21:28:07 INFO | DatabaseStorage >> 8. type type text java.lang.String
+21:28:07 INFO | DatabaseStorage >> 9. event event int8 java.lang.Long
+21:28:07 INFO | DatabaseStorage >> 10. owner owner varchar java.lang.String
+21:28:07 INFO | DatabaseStorage >> 11. id id bigserial java.lang.Long
+21:28:07 INFO | DatabaseStorage >> 12. name name text java.lang.String
+21:28:07 INFO | DatabaseStorage >> 13. date date date java.sql.Date
+21:28:07 INFO | DatabaseStorage >> 14. minage minage int8 java.lang.Long
+21:28:07 INFO | DatabaseStorage >> 15. ticketscount ticketscount int8 java.lang.Long
+21:28:07 INFO | DatabaseStorage >> 16. eventtype eventtype text java.lang.String
+21:28:07 INFO | Main >> Загружено 1 элементов в коллекцию
+21:28:07 INFO | Main >> Сервер запущен на порте 19825
+21:29:07 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:29:07 INFO | Main >> Загружено 1 элементов в коллекцию
+21:29:07 INFO | Main >> Сервер запущен на порте 19825
+22:31:03 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+22:31:03 INFO | Main >> Загружено 0 элементов в коллекцию
+22:31:03 INFO | Main >> Сервер запущен на порте 19825
+22:31:42 INFO | Main >> Коллекция сохранена
+22:31:42 INFO | Main >> Сервер остановлен
+22:31:44 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+22:31:44 INFO | Main >> Загружено 1 элементов в коллекцию
+22:31:44 INFO | Main >> Сервер запущен на порте 19825
