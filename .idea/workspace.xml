@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="LinkedList -&gt; ConcurrentLinkedDeque">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/RunServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/RunServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DatabaseStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DatabaseStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/SQLRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/SQLRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ServerCommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/ServerCommandHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/ServerNetworkHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/network/ServerNetworkHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.txt" beforeDir="false" afterPath="$PROJECT_DIR$/script.txt" afterDir="false" />
-    </list>
+    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="MultiTreading" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,7 +201,7 @@
       <workItem from="1684508446375" duration="15438000" />
       <workItem from="1684590897488" duration="10540000" />
       <workItem from="1684656686243" duration="24363000" />
-      <workItem from="1684844724214" duration="14958000" />
+      <workItem from="1684844724214" duration="15313000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1680622399634</created>
@@ -290,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684857362547</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="MultiTreading">
+      <created>1684868714629</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684868714629</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +306,8 @@
     <MESSAGE value="Database Save and registration" />
     <MESSAGE value="All Database commands checks" />
     <MESSAGE value="LinkedList -&gt; ConcurrentLinkedDeque" />
-    <option name="LAST_COMMIT_MESSAGE" value="LinkedList -&gt; ConcurrentLinkedDeque" />
+    <MESSAGE value="MultiTreading" />
+    <option name="LAST_COMMIT_MESSAGE" value="MultiTreading" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
