@@ -13,7 +13,9 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.Deque;
 import java.util.LinkedList;
+import java.util.concurrent.ConcurrentLinkedDeque;
 
 @RequiredArgsConstructor
 public class DatabaseStorage implements DataStorage {
@@ -22,10 +24,11 @@ public class DatabaseStorage implements DataStorage {
     private final DatabaseHelper db;
 
     @Override
-    public LinkedList<Ticket> readAll() {
+    public Deque<Ticket> readAll() {
         try (ResultSet set = db.executeQuery(SQLRequests.getAllTickets)) {
             if(set == null) return null;
-            LinkedList<Ticket> list = new LinkedList<>();
+            //Deque<Ticket> list = new LinkedList<>();
+            Deque<Ticket> list = new ConcurrentLinkedDeque<>();
             while (set.next()) {
                 Ticket ticket = Ticket.builder()
                         .id(set.getLong(1))
@@ -58,7 +61,7 @@ public class DatabaseStorage implements DataStorage {
     }
 
     @Override
-    public boolean saveAll(LinkedList<Ticket> list) {
+    public boolean saveAll(Deque<Ticket> list) {
         for(Ticket ticket : list) {
             if(!db.updateTicket(ticket) && !db.insertTicket(ticket, null)) return false;
         }

@@ -1,6 +1,8 @@
 package edsh.helpers;
 
+import java.util.Deque;
 import java.util.LinkedList;
+import java.util.concurrent.ConcurrentLinkedDeque;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -50,8 +52,9 @@ public class JsonHelper {
 	 * Сбор коллекции объектов из заданного {@link JSONArray}
 	 * @return Собранная коллекция
 	 */
-	public LinkedList<Ticket> toLinkedList() {
-		LinkedList<Ticket> temp = new LinkedList<>();
+	public Deque<Ticket> toList() {
+		//Deque<Ticket> temp = new LinkedList<>();
+		Deque<Ticket> temp = new ConcurrentLinkedDeque<>();
 		
 		for(int i=0; i<jsonArr.length(); i++) {
 			

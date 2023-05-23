@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.json.JSONArray;
 
 import java.nio.file.attribute.FileTime;
+import java.util.Deque;
 import java.util.LinkedList;
 
 @RequiredArgsConstructor
@@ -13,18 +14,18 @@ public class FileStorage implements DataStorage {
     private final FileHelper fh;
 
     @Override
-    public LinkedList<Ticket> readAll() {
+    public Deque<Ticket> readAll() {
         if(fh.readFile()) {
             JsonHelper jHelper = new JsonHelper(fh.getRawJson());
             if(jHelper.parseRawJson()) {
-                return jHelper.toLinkedList();
+                return jHelper.toList();
             }
         }
         return null;
     }
 
     @Override
-    public boolean saveAll(LinkedList<Ticket> list) {
+    public boolean saveAll(Deque<Ticket> list) {
         JSONArray arr = new JSONArray();
         list.forEach(ticket -> arr.put(ticket.toJsonObject()));
         JsonHelper jh = new JsonHelper(arr);

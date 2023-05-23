@@ -2,8 +2,6 @@ package edsh.command;
 
 import edsh.helpers.CommandHelper.Holder;
 
-import java.util.HashMap;
-
 public class HelpCmd extends AbstractCommand {
 
 	public HelpCmd(Holder h) {

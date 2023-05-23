@@ -2,10 +2,10 @@ package edsh.helpers;
 
 import edsh.mainclasses.Ticket;
 
-import java.util.LinkedList;
+import java.util.Deque;
 
 public interface DataStorage {
-    LinkedList<Ticket> readAll();
-    boolean saveAll(LinkedList<Ticket> list);
+    Deque<Ticket> readAll();
+    boolean saveAll(Deque<Ticket> list);
     String getCreationTime();
 }

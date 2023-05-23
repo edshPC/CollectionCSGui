@@ -4,21 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Database Save and registration">
-      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBClearCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBRemoveAllByEventCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBRemoveByIdCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBRemoveFirstCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBRemoveGreaterCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBRemoveLowerCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBUpdateCmd.java" afterDir="false" />
+    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="All Database commands checks">
       <change afterPath="$PROJECT_DIR$/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/21-05-2023.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/UpdateCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBRegisterCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/command/DBRegisterCmd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DBServerCommandHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DBServerCommandHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DatabaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/SQLRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/SQLRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/AbstractCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/HelpCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/command/HelpCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/DataStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/DataStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/FileStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/FileStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/JsonHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/JsonHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ListHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/helpers/ListHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/src/main/java/edsh/mainclasses/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DatabaseStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/src/main/java/edsh/helpers/DatabaseStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,11 +35,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -216,7 +213,8 @@
       <workItem from="1684420725771" duration="4804000" />
       <workItem from="1684508446375" duration="15438000" />
       <workItem from="1684590897488" duration="10540000" />
-      <workItem from="1684656686243" duration="24314000" />
+      <workItem from="1684656686243" duration="24363000" />
+      <workItem from="1684844724214" duration="6172000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1680622399634</created>
@@ -281,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684679985521</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="All Database commands checks">
+      <created>1684685262840</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684685262840</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +303,8 @@
     <MESSAGE value="Last fixes" />
     <MESSAGE value="Diagram added" />
     <MESSAGE value="Database Save and registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Database Save and registration" />
+    <MESSAGE value="All Database commands checks" />
+    <option name="LAST_COMMIT_MESSAGE" value="All Database commands checks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -4,14 +4,18 @@ import edsh.mainclasses.Ticket;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.util.LinkedList;
+import java.util.*;
+import java.util.concurrent.ConcurrentLinkedDeque;
 
 @NoArgsConstructor(access = AccessLevel.NONE)
 public class ListHelper {
+    @Setter
+    private static Printer printer;
 
     @Getter
-    private static LinkedList<Ticket> list;
+    private static Deque<Ticket> list;
 
     /**
      * Загружает элементы в коллекцию
@@ -21,7 +25,8 @@ public class ListHelper {
     public static int load(DataStorage ds) {
         list = ds.readAll();
         if(list != null) return list.size();
-        list = new LinkedList<>();
+        list = new ConcurrentLinkedDeque<>();
+        //list = new LinkedList<>();
         return -1;
     }
 
@@ -38,7 +43,14 @@ public class ListHelper {
      * Сортирует коллекицию по имени, затем по дате создания
      */
     public static void sortList() {
-        list.sort(Ticket::compareTo);
+        if(list instanceof List)
+            ((List<Ticket>) list).sort(Ticket::compareTo);
+        else {
+            ArrayList<Ticket> temp = new ArrayList<>(list);
+            temp.sort(Ticket::compareTo);
+            list.clear();
+            list.addAll(temp);
+        }
     }
 
     /**

@@ -1,6 +1,7 @@
 package edsh.mainclasses;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
+import java.util.Iterator;
 
 import edsh.helpers.ListHelper;
 import lombok.*;
@@ -114,7 +115,13 @@ public class Ticket implements Comparable<Ticket>, Serializable {
      */
     public static void putWithId(int index, long id, Ticket t) {
 		t.id = id;
-		ListHelper.getList().set(index, t);
+		if(index < ListHelper.getList().size()) {
+			Iterator<Ticket> it = ListHelper.getList().iterator();
+			for (int i = 0; it.hasNext() && i < index; ) it.next();
+			it.remove();
+		}
+		ListHelper.getList().add(t);
+
 		t.updateLastId();
 	}
 
