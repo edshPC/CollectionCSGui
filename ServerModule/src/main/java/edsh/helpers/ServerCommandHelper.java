@@ -19,8 +19,11 @@ public class ServerCommandHelper extends CommandHelper {
         String[] args = request.getArgs();
         if(getHolder().getCommands().get(cmd) instanceof RequireAttachment<?> command) {
             command.setAttachment(request.getAttachment());
+            synchronized (request.getAttachment()) {
+                if(executeCommand(cmd, args, printer)) logger.println("synchronized " + cmd);
+            }
         }
-        if(executeCommand(cmd, args, printer)) {
+        else if(executeCommand(cmd, args, printer)) {
             logger.println(cmd);
         }
     }

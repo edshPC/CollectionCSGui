@@ -9,3 +9,109 @@
 18:52:24 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
 18:52:24 INFO | Main >> Загружено 0 элементов в коллекцию
 18:52:24 INFO | Main >> Сервер запущен на порте 19825
+19:27:47 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+19:27:47 INFO | Main >> Загружено 0 элементов в коллекцию
+19:27:47 INFO | Main >> Сервер запущен на порте 19825
+19:27:50 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:59061
+19:27:50 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:59061
+19:28:06 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:59061
+19:28:06 INFO | Execute >> login
+19:28:06 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:59061
+19:28:58 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+19:28:58 INFO | Main >> Загружено 0 элементов в коллекцию
+19:28:58 INFO | Main >> Сервер запущен на порте 19825
+19:29:03 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:59113
+19:29:03 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:59113
+19:29:36 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:59113
+19:29:36 INFO | Execute >> login
+19:29:36 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:59119
+19:29:36 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:59113
+19:29:36 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:59119
+21:12:10 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:12:11 INFO | Main >> Загружено 0 элементов в коллекцию
+21:12:11 INFO | Main >> Сервер запущен на порте 19825
+21:12:13 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:60034
+21:12:13 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:60034
+21:12:19 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:60038
+21:12:19 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:60038
+21:12:41 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60034
+21:12:41 INFO | Execute >> login
+21:12:41 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:60034
+21:12:44 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60038
+21:12:44 INFO | Execute >> login
+21:12:44 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:60038
+21:13:10 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60034
+21:13:10 INFO | Execute >> login
+21:13:10 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:60034
+21:13:14 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60038
+21:13:14 INFO | Execute >> login
+21:13:14 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:60038
+21:13:32 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60034
+21:13:32 INFO | Execute >> login
+21:13:32 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:60034
+21:13:32 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60038
+21:13:32 INFO | Execute >> login
+21:13:32 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:60038
+21:13:49 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:60034
+21:13:52 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:60038
+21:22:35 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:22:35 INFO | Main >> Загружено 0 элементов в коллекцию
+21:22:35 INFO | Main >> Сервер запущен на порте 19825
+21:31:50 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:31:50 INFO | Main >> Загружено 0 элементов в коллекцию
+21:31:50 INFO | Main >> Сервер запущен на порте 19825
+21:32:43 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:32:43 INFO | Main >> Загружено 0 элементов в коллекцию
+21:32:43 INFO | Main >> Сервер запущен на порте 19825
+21:32:44 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:60117
+21:32:45 INFO | ServerNetworkHandler >> Подключен клиент /127.0.0.1:60121
+21:32:49 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:60117
+21:32:50 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:60121
+21:33:12 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60117
+21:33:12 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60121
+21:33:17 INFO | Execute >> login
+21:33:17 INFO | Execute >> login
+21:33:22 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:60117
+21:33:22 INFO | ServerNetworkHandler >> ERROR-ответ отправлен клиенту /127.0.0.1:60121
+21:33:44 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60117
+21:33:46 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60121
+21:33:49 INFO | Execute >> login
+21:33:51 INFO | Execute >> login
+21:33:54 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:60117
+21:33:56 INFO | ServerNetworkHandler >> AVAILABLE_COMMANDS-ответ отправлен клиенту /127.0.0.1:60121
+21:34:46 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60117
+21:34:50 INFO | ServerNetworkHandler >> Получен запрос от клиента /127.0.0.1:60121
+21:34:51 INFO | Execute >> synchronized add
+21:34:55 INFO | Execute >> synchronized add
+21:34:56 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:60117
+21:35:00 INFO | ServerNetworkHandler >> OK-ответ отправлен клиенту /127.0.0.1:60121
+21:35:49 INFO | ServerNetworkHandler >> Отключен клиент /127.0.0.1:60121
+21:40:13 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:40:13 INFO | Main >> Загружено 2 элементов в коллекцию
+21:40:13 INFO | Main >> Сервер запущен на порте 19825
+21:42:28 ERROR| DatabaseHelper >> Ошибка в выполнении SQL-запроса: ERROR: cannot insert a non-DEFAULT value into column "id"
+  Подробности: Column "id" is an identity column defined as GENERATED ALWAYS.
+  Подсказка: Use OVERRIDING SYSTEM VALUE to override.
+21:42:29 ERROR| DatabaseHelper >> Ошибка в выполнении SQL-запроса: ERROR: cannot insert a non-DEFAULT value into column "id"
+  Подробности: Column "id" is an identity column defined as GENERATED ALWAYS.
+  Подсказка: Use OVERRIDING SYSTEM VALUE to override.
+21:49:01 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:49:01 INFO | Main >> Загружено 4 элементов в коллекцию
+21:49:01 INFO | Main >> Сервер запущен на порте 19825
+21:49:03 ERROR| DatabaseHelper >> Ошибка в выполнении SQL-запроса: ERROR: column "newid" does not exist
+  Позиция: 189
+21:49:03 ERROR| DatabaseHelper >> Ошибка в выполнении SQL-запроса: ERROR: column "newid" does not exist
+  Позиция: 189
+21:49:04 ERROR| DatabaseHelper >> Ошибка в выполнении SQL-запроса: ERROR: column "newid" does not exist
+  Позиция: 189
+21:49:04 ERROR| DatabaseHelper >> Ошибка в выполнении SQL-запроса: ERROR: column "newid" does not exist
+  Позиция: 189
+21:52:52 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:52:52 INFO | Main >> Загружено 8 элементов в коллекцию
+21:52:52 INFO | Main >> Сервер запущен на порте 19825
+21:53:13 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+21:53:14 INFO | Main >> Загружено 8 элементов в коллекцию
+21:53:14 INFO | Main >> Сервер запущен на порте 19825
+22:01:46 INFO | DatabaseHelper >> Подключение к базе данных 'studs' успешно
+22:01:46 INFO | Main >> Загружено 8 элементов в коллекцию
+22:01:46 INFO | Main >> Сервер запущен на порте 19825

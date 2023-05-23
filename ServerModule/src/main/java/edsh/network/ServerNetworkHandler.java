@@ -11,9 +11,15 @@ import java.net.SocketException;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ForkJoinPool;
 
 public class ServerNetworkHandler {
     private final Printer printer = new LoggerPrinter(getClass().getSimpleName());
+    private final ExecutorService receiver = Executors.newFixedThreadPool(4);
+    private final ExecutorService executor = new ForkJoinPool();
+    private final ExecutorService sender = new ForkJoinPool();
     private final int port;
     private RequestHandler requestHandler;
     private ServerSocketChannel servSocket;
@@ -48,11 +54,10 @@ public class ServerNetworkHandler {
             if(key.isAcceptable())
                 handleConnection();
             else if(key.isReadable()) {
-                if(attachRequest(key)) requestHandler.handleRequestFrom(key);
-                else disconnectClient(key);
+                handleRequest(key);
             }
             else if (key.isWritable()) {
-                if(!handleResponse(key)) disconnectClient(key);
+                handleResponse(key);
             }
         }
     }
@@ -61,6 +66,9 @@ public class ServerNetworkHandler {
     public void close() {
         selector.close();
         servSocket.close();
+        receiver.shutdown();
+        executor.shutdown();
+        sender.shutdown();
     }
 
     private void handleConnection() {
@@ -75,55 +83,63 @@ public class ServerNetworkHandler {
         }
     }
 
-    private boolean attachRequest(SelectionKey key) {
-        SocketChannel client = (SocketChannel) key.channel();
-        try {
-            ByteBuffer bb = ByteBuffer.allocate(1 << 20); //Mb
-            if(client.read(bb) <= 0) return false;
-            ObjectInputStream ois = new ObjectInputStream(
-                    new ByteArrayInputStream(bb.array()));
-            Object request = ois.readObject();
-            ois.close();
+    private void handleRequest(SelectionKey key) {
+        key.interestOps(0);
+        receiver.submit(() -> {
+            SocketChannel client = (SocketChannel) key.channel();
+            try {
+                ByteBuffer bb = ByteBuffer.allocate(1 << 20); //Mb
+                if(client.read(bb) <= 0) throw new InterruptedException();
+                ObjectInputStream ois = new ObjectInputStream(
+                        new ByteArrayInputStream(bb.array()));
+                Object request = ois.readObject();
+                ois.close();
 
-            if(!(request instanceof Request)) {
-                printer.errPrintln("Получен некорректный запрос");
-                return false;
+                if(!(request instanceof Request)) {
+                    printer.errPrintln("Получен некорректный запрос");
+                    throw new InterruptedException();
+                }
+                key.attach(request);
+                printer.println("Получен запрос от клиента " + client.getRemoteAddress().toString());
+                executor.submit(() -> requestHandler.handleRequestFrom(key));
+                return;
+            } catch (SocketException | InterruptedException ignored) {}
+            catch (IOException | ClassNotFoundException e) {
+                printer.errPrintln("Ошибка в получении запроса: " + e.getMessage());
             }
-            key.attach(request);
-            printer.println("Получен запрос от клиента " + client.getRemoteAddress().toString());
-            return true;
-        } catch (SocketException ignored) {}
-        catch (IOException | ClassNotFoundException e) {
-            printer.errPrintln("Ошибка в получении запроса: " + e.getMessage());
-        }
-        return false;
+            disconnectClient(key);
+        });
     }
 
-    private boolean handleResponse(SelectionKey key) {
-        SocketChannel client = (SocketChannel) key.channel();
-        try {
-            Object response = key.attachment();
-            if(!(response instanceof Response)) {
-                printer.errPrintln("Некорректный ответ");
-                return false;
+    private void handleResponse(SelectionKey key) {
+        key.interestOps(0);
+        sender.submit(() -> {
+            SocketChannel client = (SocketChannel) key.channel();
+            try {
+                Object response = key.attachment();
+                if (!(response instanceof Response)) {
+                    printer.errPrintln("Некорректный ответ");
+                    throw new InterruptedException();
+                }
+
+                ByteArrayOutputStream baos = new ByteArrayOutputStream(1 << 20); //Mb
+                ObjectOutputStream oos = new ObjectOutputStream(baos);
+                oos.writeObject(response);
+                oos.close();
+
+                ByteBuffer bb = ByteBuffer.wrap(baos.toByteArray());
+                if (client.write(bb) <= 0) throw new InterruptedException();
+                key.interestOps(SelectionKey.OP_READ); //После записи разрешаем только читать
+
+                printer.println(((Response) response).getStatus().name()
+                        + "-ответ отправлен клиенту " + client.getRemoteAddress().toString());
+                return;
+            } catch (InterruptedException ignored) {}
+            catch (Exception e) {
+                printer.errPrintln("Ошибка в отправке ответа: " + e.getMessage());
             }
-
-            ByteArrayOutputStream baos = new ByteArrayOutputStream(1 << 20); //Mb
-            ObjectOutputStream oos = new ObjectOutputStream(baos);
-            oos.writeObject(response);
-            oos.close();
-
-            ByteBuffer bb = ByteBuffer.wrap(baos.toByteArray());
-            if(client.write(bb) <= 0) return false;
-            key.interestOps(SelectionKey.OP_READ); //После записи разрешаем только читать
-
-            printer.println(((Response) response).getStatus().name()
-                    + "-ответ отправлен клиенту " + client.getRemoteAddress().toString());
-            return true;
-        } catch (Exception e) {
-            printer.errPrintln("Ошибка в отправке ответа: " + e.getMessage());
-        }
-        return false;
+            disconnectClient(key);
+        });
     }
 
     private void disconnectClient(SelectionKey key) {

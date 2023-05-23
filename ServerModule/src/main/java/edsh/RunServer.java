@@ -1,7 +1,6 @@
 package edsh;
 
 import edsh.helpers.*;
-import edsh.network.RequestHandler;
 import edsh.network.ServerNetworkHandler;
 
 import java.io.BufferedReader;
@@ -24,7 +23,6 @@ public class RunServer {
         } // -port
         if(arguments.containsKey('d')) dbProps = arguments.get('d'); // -db
         boolean isFileMode = arguments.containsKey('f');
-
 
         ServerNetworkHandler handler = new ServerNetworkHandler(port);
 

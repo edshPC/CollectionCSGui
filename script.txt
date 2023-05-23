@@ -1,7 +1,6 @@
 show
-info
 add
-script ticket
+script ticket2
 10, 123
 213
 comm
@@ -11,3 +10,4 @@ ev name
 12
 5
 1
+info

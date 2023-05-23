@@ -14,7 +14,9 @@ import java.sql.Timestamp;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Deque;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
 @RequiredArgsConstructor
@@ -62,9 +64,18 @@ public class DatabaseStorage implements DataStorage {
 
     @Override
     public boolean saveAll(Deque<Ticket> list) {
+        Set<Long> ids = new HashSet<>();
         for(Ticket ticket : list) {
             if(!db.updateTicket(ticket) && !db.insertTicket(ticket, null)) return false;
+            ids.add(ticket.getId());
         }
+        try {
+            ResultSet set = db.executeQuery(SQLRequests.getAllIds);
+            while (set.next()) {
+                long id = set.getLong(1);
+                if(!ids.contains(id)) db.removeTicket(id);
+            }
+        } catch (SQLException ignored) {}
         return true;
     }
 

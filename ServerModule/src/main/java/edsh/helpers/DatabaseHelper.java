@@ -92,13 +92,13 @@ public class DatabaseHelper {
             if(!containsTicket(t.getId())) return false;
             Event ev = t.getEvent();
             PreparedStatement st = connection.prepareStatement(SQLRequests.updateEvent);
-            st.setLong(1, ev.getId());
-            setEventFields(st, ev, 1);
+            setEventFields(st, ev, 0);
+            st.setLong(6, ev.getId());
             st.execute();
 
             st = connection.prepareStatement(SQLRequests.updateTicket);
-            st.setLong(1, t.getId());
-            setTicketFields(st, t, 1);
+            setTicketFields(st, t, 0);
+            st.setLong(9, t.getId());
             st.execute();
             return true;
         } catch (SQLException e) {

@@ -40,26 +40,48 @@ SELECT * FROM tickets
     JOIN events on events.id = tickets.event
 """;
 
+//    public static final String updateEvent = """
+//INSERT INTO events (id, name, date, minage, ticketscount, eventtype) VALUES
+//    (?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE
+//        SET name = excluded.name,
+//            date = excluded.date,
+//            minage = excluded.minage,
+//            ticketscount = excluded.ticketscount,
+//            eventtype = excluded.eventtype;
+//""";
+//    public static final String updateTicket = """
+//INSERT INTO tickets (id, name, x, y, creationdate, price, comment, type, event) VALUES
+//    (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE
+//        SET name = excluded.name,
+//            x = excluded.x,
+//            y = excluded.y,
+//            creationdate = excluded.creationdate,
+//            price = excluded.price,
+//            comment = excluded.comment,
+//            type = excluded.type,
+//            event = excluded.event;
+//""";
+
     public static final String updateEvent = """
-INSERT INTO events (id, name, date, minage, ticketscount, eventtype) VALUES
-    (?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE
-        SET name = excluded.name,
-            date = excluded.date,
-            minage = excluded.minage,
-            ticketscount = excluded.ticketscount,
-            eventtype = excluded.eventtype;
+UPDATE events
+        SET name = ?,
+            date = ?,
+            minage = ?,
+            ticketscount = ?,
+            eventtype = ?
+        WHERE id = ?;
 """;
     public static final String updateTicket = """
-INSERT INTO tickets (id, name, x, y, creationdate, price, comment, type, event) VALUES
-    (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE
-        SET name = excluded.name,
-            x = excluded.x,
-            y = excluded.y,
-            creationdate = excluded.creationdate,
-            price = excluded.price,
-            comment = excluded.comment,
-            type = excluded.type,
-            event = excluded.event;
+UPDATE tickets
+        SET name = ?,
+            x = ?,
+            y = ?,
+            creationdate = ?,
+            price = ?,
+            comment = ?,
+            type = ?,
+            event = ?
+        WHERE id = ?;
 """;
 
     public static final String addEvent = """
@@ -76,6 +98,7 @@ INSERT INTO tickets (name, x, y, creationdate, price, comment, type, event, owne
     public static final String hasLogin = "SELECT exists(SELECT 1 FROM users WHERE login = ?);";
 
     public static final String removeTicket = "DELETE FROM events WHERE id = (SELECT event FROM tickets WHERE id = ? LIMIT 1);";
+    public static final String getAllIds = "SELECT id FROM tickets;";
 
     public static final String addUser = "INSERT INTO users (login, passwordhash) VALUES (?, ?);";
     public static final String getOwner = "SELECT owner FROM tickets WHERE id = ? LIMIT 1";
