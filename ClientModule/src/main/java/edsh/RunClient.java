@@ -10,6 +10,7 @@ import java.util.HashMap;
 public class RunClient
 {
     public static void main( String[] args ) {
+
         Printer printer = new ConsolePrinter();
         HashMap<Character, String> arguments = new ArgsHelper(args).parseKeyArguments();
         String address = arguments.get('a');

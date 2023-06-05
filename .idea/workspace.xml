@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="MultiTreading" />
+    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Diagram">
+      <change afterPath="$PROJECT_DIR$/logs/24-05-2023.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,7 +206,12 @@
       <workItem from="1684508446375" duration="15438000" />
       <workItem from="1684590897488" duration="10540000" />
       <workItem from="1684656686243" duration="24363000" />
-      <workItem from="1684844724214" duration="15313000" />
+      <workItem from="1684844724214" duration="17378000" />
+      <workItem from="1684915403859" duration="3034000" />
+      <workItem from="1685013027748" duration="194000" />
+      <workItem from="1685013954308" duration="92000" />
+      <workItem from="1685022611302" duration="74000" />
+      <workItem from="1685724296942" duration="1344000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1680622399634</created>
@@ -287,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684868714629</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Diagram">
+      <created>1684869241857</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684869241857</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +324,8 @@
     <MESSAGE value="All Database commands checks" />
     <MESSAGE value="LinkedList -&gt; ConcurrentLinkedDeque" />
     <MESSAGE value="MultiTreading" />
-    <option name="LAST_COMMIT_MESSAGE" value="MultiTreading" />
+    <MESSAGE value="Diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="Diagram" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
