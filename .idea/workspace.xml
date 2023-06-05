@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Diagram">
-      <change afterPath="$PROJECT_DIR$/logs/24-05-2023.log" afterDir="false" />
+    <list default="true" id="56de8c7e-a103-4665-afeb-3fdfe5510084" name="Changes" comment="Last fix">
+      <change afterPath="$PROJECT_DIR$/logs/23-05-2023.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/src/main/java/edsh/RunClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClientModule/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ClientModule/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5Module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5Module/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerModule/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ServerModule/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +76,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -111,6 +117,19 @@
     <configuration name="RunServer" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="edsh.RunServer" />
       <module name="ServerModule" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="CollectionCSGui" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="CollectionCSGui" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -212,6 +231,11 @@
       <workItem from="1685013954308" duration="92000" />
       <workItem from="1685022611302" duration="74000" />
       <workItem from="1685724296942" duration="1344000" />
+      <workItem from="1685976202623" duration="218000" />
+      <workItem from="1685976509630" duration="33000" />
+      <workItem from="1685976567246" duration="305000" />
+      <workItem from="1685976957270" duration="18000" />
+      <workItem from="1685977176871" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1680622399634</created>
@@ -304,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684869241857</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Last fix">
+      <created>1685976248382</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685976248382</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +356,8 @@
     <MESSAGE value="LinkedList -&gt; ConcurrentLinkedDeque" />
     <MESSAGE value="MultiTreading" />
     <MESSAGE value="Diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="Diagram" />
+    <MESSAGE value="Last fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
